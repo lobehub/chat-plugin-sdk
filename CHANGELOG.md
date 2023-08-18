@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.0.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.0.0...v1.0.1)
+
+<sup>Released on **2023-08-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix market interface.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix market interface ([7afe74f](https://github.com/lobehub/chat-plugin-sdk/commit/7afe74f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## Version 1.0.0
 
 <sup>Released on **2023-08-18**</sup>
