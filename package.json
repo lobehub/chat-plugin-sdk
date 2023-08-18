@@ -30,6 +30,7 @@
     "ci": "npm run lint && npm run type-check && npm run test",
     "dev": "father dev",
     "dev:docs": "npm run start --prefix=example",
+    "doctor": "father doctor",
     "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:md": "remark . --quiet --frail --output",
     "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
