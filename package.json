@@ -1,0 +1,98 @@
+{
+  "name": "@lobehub/chat-plugin-sdk",
+  "version": "0.0.0",
+  "description": "Lobe Chat Plugin SDK, help you to build an amazing chat plugin for Lobe Chat",
+  "keywords": [
+    "lobehub",
+    "dumi",
+    "dumi theme"
+  ],
+  "homepage": "https://github.com/lobehub/chat-plugin-sdk",
+  "bugs": {
+    "url": "https://github.com/lobehub/chat-plugin-sdk/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lobehub/chat-plugin-sdk.git"
+  },
+  "license": "MIT",
+  "author": "LobeHub <i@lobehub.com>",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:docs": "npm run build && npm run build --prefix=example",
+    "ci": "npm run lint && npm run type-check && npm run test",
+    "dev": "father dev",
+    "dev:docs": "npm run start --prefix=example",
+    "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:md": "remark . --quiet --frail --output",
+    "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prepack": "npm run build && clean-pkg-json",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build",
+    "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
+    "release": "semantic-release",
+    "start": "npm run dev",
+    "test": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage  --passWithNoTests",
+    "test:update": "vitest -u",
+    "type-check": "tsc -p tsconfig-check.json"
+  },
+  "lint-staged": {
+    "*.md": [
+      "remark --quiet --output --",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17",
+    "@lobehub/lint": "latest",
+    "@types/lodash-es": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitest/coverage-v8": "latest",
+    "clean-pkg-json": "^1",
+    "commitlint": "^17",
+    "dumi": "^2",
+    "dumi-assets-types": "^1",
+    "eslint": "^8",
+    "father": "^4",
+    "husky": "^8",
+    "jsdom": "^22",
+    "leva": "^0",
+    "lint-staged": "^13",
+    "prettier": "^3",
+    "react": "^18",
+    "react-dom": "^18",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "semantic-release": "^21",
+    "stylelint": "^15",
+    "typescript": "^5",
+    "vitest": "latest"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

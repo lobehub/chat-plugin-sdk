@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@@/*": ["example/.dumi/tmp/*"],
+      "@/*": ["src/*"],
+      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
+      "chat-plugin-sdk": ["src"],
+      "chat-plugin-sdk/*": ["src/*", "*"]
+    }
+  },
+  "include": ["src", "tests", ".dumi/**/*", "typings", "example/.dumirc.ts", "*.ts"]
+}
