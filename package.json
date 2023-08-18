@@ -63,6 +63,9 @@
       "eslint --fix"
     ]
   },
+  "dependencies": {
+    "@types/json-schema": "^7.0.12"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17",
     "@lobehub/lint": "latest",
