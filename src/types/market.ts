@@ -4,7 +4,7 @@
  * @nameCN 插件列表
  * @descCN 插件市场的列表接口
  */
-export interface LobeChatPlugins {
+export interface LobeChatPluginsMarketIndex {
   /**
    * plugins
    * @desc List of plugin items
