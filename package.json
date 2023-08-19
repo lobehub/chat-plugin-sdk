@@ -65,7 +65,8 @@
     ]
   },
   "dependencies": {
-    "@types/json-schema": "^7.0.12"
+    "@types/json-schema": "^7.0.12",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17",

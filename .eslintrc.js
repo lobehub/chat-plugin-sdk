@@ -5,5 +5,6 @@ module.exports = {
   rules: {
     ...config.rules,
     'unicorn/prefer-string-replace-all': 0,
+    'unicorn/switch-case-braces': 0,
   },
 };

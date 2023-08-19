@@ -11,7 +11,7 @@ export interface LobeChatPluginsMarketIndex {
    * @nameCN 插件列表
    * @descCN 插件项列表
    */
-  plugins: LobeChatPluginManifest[];
+  plugins: LobeChatPluginMeta[];
   /**
    * version
    * @desc Version of the plugins
@@ -27,7 +27,7 @@ export interface LobeChatPluginsMarketIndex {
  * @nameCN 插件项
  * @descCN 插件项接口
  */
-export interface LobeChatPluginManifest {
+export interface LobeChatPluginMeta {
   /**
    * createAt
    * @desc Creation date of the plugin
