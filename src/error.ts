@@ -1,7 +1,13 @@
 export enum ErrorType {
   // ******* 业务错误语义 ******* //
   PluginMarketIndexNotFound = 'pluginMarketIndexNotFound', // 插件市场索引解析失败
-  PluginMarketIndexParseError = 'pluginMarketIndexParseError', // 插件市场索引解析失败
+  PluginMarketIndexInvalid = 'pluginMarketIndexInvalid', // 插件市场索引无效
+
+  PluginMetaNotFound = 'pluginMetaNotFound', // 没有找到插件元数据
+  PluginMetaInvalid = 'pluginMetaInvalid', // 插件元数据无效
+
+  PluginManifestNotFound = 'pluginManifestNotFound', // 插件描述文件不存在
+  PluginManifestInvalid = 'pluginManifestInvalid', // 插件描述文件不存在
 
   // ******* 客户端错误 ******* //
   BadRequest = 400,
@@ -18,21 +24,32 @@ export enum ErrorType {
   GatewayTimeout = 504,
 }
 
-const getStatus = (errorType: ErrorType) => {
+const getStatus = (errorType: ErrorType | string) => {
   switch (errorType) {
-    case ErrorType.PluginMarketIndexNotFound:
+    case ErrorType.PluginMetaNotFound:
+    case ErrorType.PluginManifestNotFound:
       return 404;
 
-    case ErrorType.PluginMarketIndexParseError:
+    case ErrorType.PluginMetaInvalid:
+      return 490;
+    case ErrorType.PluginManifestInvalid:
+      return 491;
+
+    case ErrorType.PluginMarketIndexNotFound:
+      return 590;
+
+    case ErrorType.PluginMarketIndexInvalid:
       return 590;
   }
 
-  return errorType;
+  if (typeof errorType === 'number') return errorType;
+
+  return 500;
 };
 
 export interface ErrorResponse {
   body: any;
-  errorType: ErrorType;
+  errorType: ErrorType | string;
 }
 
 /**
@@ -41,7 +58,7 @@ export interface ErrorResponse {
  * @param body - 响应体数据
  * @returns {Response} - 错误响应对象
  */
-export const createErrorResponse = (errorType: ErrorType, body?: string | object) => {
+export const createErrorResponse = (errorType: ErrorType | string, body?: string | object) => {
   // 获取错误类型对应的状态码
   const statusCode = getStatus(errorType);
 
