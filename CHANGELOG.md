@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.1.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.1.1...v1.1.2)
+
+<sup>Released on **2023-08-19**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Export ErrorType.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Export ErrorType ([5c5e5c8](https://github.com/lobehub/chat-plugin-sdk/commit/5c5e5c8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.1.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.1.0...v1.1.1)
 
 <sup>Released on **2023-08-19**</sup>
