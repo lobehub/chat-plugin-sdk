@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.3.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.2.0...v1.3.0)
+
+<sup>Released on **2023-08-19**</sup>
+
+#### ✨ Features
+
+- **misc**: 增加 manifest schema 、error 校验方法.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: 增加 manifest schema 、error 校验方法 ([8888998](https://github.com/lobehub/chat-plugin-sdk/commit/8888998))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.2.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.1.2...v1.2.0)
 
 <sup>Released on **2023-08-19**</sup>
