@@ -21,13 +21,6 @@ export interface PluginSchema extends Omit<JSONSchema7, 'type'> {
  */
 export interface LobeChatPlugin {
   /**
-   * Creation date
-   * @desc The date when the plugin was added
-   * @nameCN 创建日期
-   * @descCN 添加该插件的日期
-   */
-  createAt: string;
-  /**
    * Plugin name
    * @desc The name of the plugin
    * @nameCN 插件名称
