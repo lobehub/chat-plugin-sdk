@@ -33,7 +33,11 @@ export interface LobeChatPlugin {
    * @nameCN 插件模式
    * @descCN 插件的模式
    */
-  schema: PluginSchema;
+  schema: {
+    description: string;
+    name: string;
+    parameters: PluginSchema;
+  };
   server: {
     /**
      * Endpoint URL
