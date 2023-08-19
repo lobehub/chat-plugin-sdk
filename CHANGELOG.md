@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.2.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.1.2...v1.2.0)
+
+<sup>Released on **2023-08-19**</sup>
+
+#### ✨ Features
+
+- **misc**: 增加插件市场索引校验方法.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: 增加插件市场索引校验方法 ([37d56e9](https://github.com/lobehub/chat-plugin-sdk/commit/37d56e9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.1.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.1.1...v1.1.2)
 
 <sup>Released on **2023-08-19**</sup>
