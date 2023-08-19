@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.1.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.0.2...v1.1.0)
+
+<sup>Released on **2023-08-19**</sup>
+
+#### ✨ Features
+
+- **misc**: Add error Response func.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add error Response func ([ac3e036](https://github.com/lobehub/chat-plugin-sdk/commit/ac3e036))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.0.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.0.1...v1.0.2)
 
 <sup>Released on **2023-08-19**</sup>
