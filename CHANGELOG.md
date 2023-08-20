@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.4.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.3.1...v1.4.0)
+
+<sup>Released on **2023-08-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Add plugin request payload function.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add plugin request payload function ([b1ac976](https://github.com/lobehub/chat-plugin-sdk/commit/b1ac976))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.3.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.3.0...v1.3.1)
 
 <sup>Released on **2023-08-19**</sup>
