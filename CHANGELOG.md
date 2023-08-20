@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.5.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.4.0...v1.5.0)
+
+<sup>Released on **2023-08-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Add plugin client render interface.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add plugin client render interface ([90412d1](https://github.com/lobehub/chat-plugin-sdk/commit/90412d1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.4.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.3.1...v1.4.0)
 
 <sup>Released on **2023-08-20**</sup>
