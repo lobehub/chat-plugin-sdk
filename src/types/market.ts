@@ -83,10 +83,17 @@ export interface Meta {
    */
   avatar: string;
   /**
+   * description
+   * @desc Description of the plugin
+   * @nameCN 描述
+   * @descCN 插件的描述
+   */
+  description?: string;
+  /**
    * tags
    * @desc Tags of the plugin
    * @nameCN 标签
    * @descCN 插件的标签
    */
-  tags: string[];
+  tags?: string[];
 }
