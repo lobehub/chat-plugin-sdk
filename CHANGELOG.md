@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.5.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.5.1...v1.5.2)
+
+<sup>Released on **2023-08-22**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Add cjs support.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Add cjs support ([82001a0](https://github.com/lobehub/chat-plugin-sdk/commit/82001a0))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.5.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.5.0...v1.5.1)
 
 <sup>Released on **2023-08-21**</sup>
