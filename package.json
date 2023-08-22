@@ -18,11 +18,12 @@
   "license": "MIT",
   "author": "LobeHub <i@lobehub.com>",
   "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib",
+    "es"
   ],
   "scripts": {
     "build": "father build",
@@ -65,6 +66,7 @@
     ]
   },
   "dependencies": {
+    "@babel/runtime": "^7.22.10",
     "@types/json-schema": "^7.0.12",
     "zod": "^3.22.2"
   },
