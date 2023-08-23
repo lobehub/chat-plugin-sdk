@@ -4,8 +4,11 @@
   "description": "Lobe Chat Plugin SDK, help you to build an amazing chat plugin for Lobe Chat",
   "keywords": [
     "lobehub",
-    "dumi",
-    "dumi theme"
+    "sdk",
+    "chatgpt",
+    "openai",
+    "plugin",
+    "chat-plugin"
   ],
   "homepage": "https://github.com/lobehub/chat-plugin-sdk",
   "bugs": {
