@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.6.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.5.2...v1.6.0)
+
+<sup>Released on **2023-08-24**</sup>
+
+#### ✨ Features
+
+- **misc**: Update schema types.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update schema types ([4cb0e53](https://github.com/lobehub/chat-plugin-sdk/commit/4cb0e53))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.5.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.5.1...v1.5.2)
 
 <sup>Released on **2023-08-22**</sup>
