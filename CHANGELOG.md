@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.7.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.6.2...v1.7.0)
+
+<sup>Released on **2023-08-24**</sup>
+
+#### ✨ Features
+
+- **misc**: Add setting config.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add setting config ([180e713](https://github.com/lobehub/chat-plugin-sdk/commit/180e713))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.6.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.6.1...v1.6.2)
 
 <sup>Released on **2023-08-24**</sup>
