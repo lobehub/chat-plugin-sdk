@@ -15,13 +15,14 @@ export const pluginMetaSchema = z.object({
 
 export const marketIndexSchema = z.object({
   plugins: z.array(z.any()),
-  version: z.number(),
+  schemaVersion: z.number(),
 });
 
 export const pluginRequestPayloadSchema = z.object({
+  apiName: z.string(),
   arguments: z.string().optional(),
+  identifier: z.string(),
   indexUrl: z.string().optional(),
-  name: z.string(),
 });
 
 export type PluginRequestPayload = z.infer<typeof pluginRequestPayloadSchema>;
