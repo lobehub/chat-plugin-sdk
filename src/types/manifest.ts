@@ -1,14 +1,14 @@
-import { JSONSchema7, JSONSchema7Definition } from 'json-schema';
+import { JSONSchema7 } from 'json-schema';
 
 /**
  * Plugin Schema
- * @desc the schema of plugin, describe the api input of the function
+ * @desc the schema of plugin, de´scribe the api input of the function
  * @nameCN 插件清单
  * @descCN 描述一个插件的构成要素
  */
 export interface PluginSchema extends Omit<JSONSchema7, 'type'> {
   properties: {
-    [key: string]: JSONSchema7Definition;
+    [key: string]: JSONSchema7;
   };
   type: 'object';
 }
