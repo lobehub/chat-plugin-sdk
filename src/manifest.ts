@@ -1,20 +1,20 @@
 import { z } from 'zod';
 
-export const pluginManifestSchema = z.object({
+export const pluginApiSchema = z.object({
+  description: z.string(),
   name: z.string(),
-  schema: z.object({
-    description: z.string(),
-    name: z.string(),
-
-    parameters: z.object({
-      properties: z.object({}),
-      type: z.enum(['object']),
-    }),
+  parameters: z.object({
+    properties: z.object({}),
+    type: z.enum(['object']),
   }),
+  url: z.string().url(),
+});
 
-  server: z.object({
-    url: z.string(),
-  }),
+export const pluginManifestSchema = z.object({
+  api: z.array(pluginApiSchema),
+  identifier: z.string(),
+  openapi: z.string().optional(),
+
   ui: z
     .object({
       url: z.string().optional(),

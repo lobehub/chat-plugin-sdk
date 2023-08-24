@@ -41,6 +41,7 @@ export interface LobeChatPluginManifest {
    * @descCN 插件的名称，需要和提交到 LobeChat Plugins 仓库的插件名称一致
    */
   identifier: string;
+  openapi?: string;
   /**
    * plugin ui on user side
    * @desc The type of rendering for the plugin

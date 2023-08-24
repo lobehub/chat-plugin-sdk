@@ -1,15 +1,16 @@
 import { z } from 'zod';
 
 export const pluginMetaSchema = z.object({
+  author: z.string(),
   createAt: z.string(),
   homepage: z.string(),
+  identifier: z.string(),
   manifest: z.string(),
   meta: z.object({
     avatar: z.string().optional(),
     tags: z.array(z.string()).optional(),
   }),
-  name: z.string(),
-  schemaVersion: z.enum(['v1']),
+  schemaVersion: z.number(),
 });
 
 export const marketIndexSchema = z.object({
