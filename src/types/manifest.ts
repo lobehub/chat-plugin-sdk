@@ -13,40 +13,34 @@ export interface PluginSchema extends Omit<JSONSchema7, 'type'> {
   type: 'object';
 }
 
+export interface LobeChatPluginApi {
+  description: string;
+  name: string;
+  parameters: PluginSchema;
+  /**
+   * Endpoint URL
+   * @desc The endpoint URL of the plugin
+   * @nameCN 服务端接口
+   * @descCN 插件服务端的接口地址 URL
+   */
+  url: string;
+}
+
 /**
  * Plugin manifest
  * @desc Represents the manifest of a plugin
  * @nameCN 插件清单
  * @descCN 描述一个插件的构成要素
  */
-export interface LobeChatPlugin {
+export interface LobeChatPluginManifest {
+  api: LobeChatPluginApi[];
   /**
    * Plugin name
    * @desc The name of the plugin
    * @nameCN 插件名称
    * @descCN 插件的名称，需要和提交到 LobeChat Plugins 仓库的插件名称一致
    */
-  name: string;
-  /**
-   * Plugin schema
-   * @desc The schema of the plugin
-   * @nameCN 插件模式
-   * @descCN 插件的模式
-   */
-  schema: {
-    description: string;
-    name: string;
-    parameters: PluginSchema;
-  };
-  server: {
-    /**
-     * Endpoint URL
-     * @desc The endpoint URL of the plugin
-     * @nameCN 服务端接口
-     * @descCN 插件服务端的接口地址 URL
-     */
-    url: string;
-  };
+  identifier: string;
   /**
    * plugin ui on user side
    * @desc The type of rendering for the plugin

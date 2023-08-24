@@ -18,7 +18,7 @@ export interface LobeChatPluginsMarketIndex {
    * @nameCN 版本
    * @descCN 插件的版本
    */
-  version: 1;
+  schemaVersion: 1;
 }
 
 /**
@@ -28,6 +28,7 @@ export interface LobeChatPluginsMarketIndex {
  * @descCN 插件项接口
  */
 export interface LobeChatPluginMeta {
+  author: string;
   /**
    * createAt
    * @desc Creation date of the plugin
@@ -43,6 +44,11 @@ export interface LobeChatPluginMeta {
    */
   homepage: string;
   /**
+   * plugin identifier
+   * @nameCN 插件的名称
+   */
+  identifier: string;
+  /**
    * manifest url of this plugin
    * @desc Manifest of the plugin
    * @nameCN 插件的线上 manifest url
@@ -56,16 +62,11 @@ export interface LobeChatPluginMeta {
    */
   meta: Meta;
   /**
-   * plugin name
-   * @nameCN 插件的名称
-   */
-  name: string;
-  /**
    * Manifest schema version
    * @desc The version of the plugin manifest schema
    * @nameCN 插件清单的版本
    */
-  schemaVersion: 'v1';
+  schemaVersion: number;
 }
 
 /**
@@ -96,4 +97,5 @@ export interface Meta {
    * @descCN 插件的标签
    */
   tags?: string[];
+  title: string;
 }
