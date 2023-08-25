@@ -10,6 +10,11 @@ export const PluginErrorType = {
   PluginManifestNotFound: 'PluginManifestNotFound', // 插件描述文件不存在
   PluginManifestInvalid: 'PluginManifestInvalid', // 插件描述文件不存在
 
+  PluginSettingsInvalid: 'PluginSettingsInvalid', // 插件设置不正确
+
+  PluginApiNotFound: 'PluginApiNotFound', // 插件 API 不存在
+  PluginApiParamsError: 'PluginApiParamsError', // 插件 API 请求入参有问题
+
   // ******* 客户端错误 ******* //
   BadRequest: 400,
   Unauthorized: 401,
@@ -30,6 +35,7 @@ export type IPluginErrorType = (typeof PluginErrorType)[keyof typeof PluginError
 
 const getStatus = (errorType: IPluginErrorType | string) => {
   switch (errorType) {
+    case PluginErrorType.PluginApiNotFound:
     case PluginErrorType.PluginMetaNotFound:
     case PluginErrorType.PluginManifestNotFound:
       return 404;
@@ -38,6 +44,8 @@ const getStatus = (errorType: IPluginErrorType | string) => {
       return 490;
     case PluginErrorType.PluginManifestInvalid:
       return 491;
+    case PluginErrorType.PluginApiParamsError:
+      return 492;
 
     case PluginErrorType.PluginMarketIndexNotFound:
       return 590;
