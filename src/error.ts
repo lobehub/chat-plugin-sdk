@@ -1,14 +1,14 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 export const PluginErrorType = {
   // ******* 业务错误语义 ******* //
-  PluginMarketIndexNotFound: 'pluginMarketIndexNotFound', // 插件市场索引解析失败
-  PluginMarketIndexInvalid: 'pluginMarketIndexInvalid', // 插件市场索引无效
+  PluginMarketIndexNotFound: 'PluginMarketIndexNotFound', // 插件市场索引解析失败
+  PluginMarketIndexInvalid: 'PluginMarketIndexInvalid', // 插件市场索引无效
 
-  PluginMetaNotFound: 'pluginMetaNotFound', // 没有找到插件元数据
-  PluginMetaInvalid: 'pluginMetaInvalid', // 插件元数据无效
+  PluginMetaNotFound: 'PluginMetaNotFound', // 没有找到插件元数据
+  PluginMetaInvalid: 'PluginMetaInvalid', // 插件元数据无效
 
-  PluginManifestNotFound: 'pluginManifestNotFound', // 插件描述文件不存在
-  PluginManifestInvalid: 'pluginManifestInvalid', // 插件描述文件不存在
+  PluginManifestNotFound: 'PluginManifestNotFound', // 插件描述文件不存在
+  PluginManifestInvalid: 'PluginManifestInvalid', // 插件描述文件不存在
 
   // ******* 客户端错误 ******* //
   BadRequest: 400,
