@@ -14,9 +14,7 @@ export const getPluginSettingsStringFromRequest = <T = any>(req: Request): T | u
 export const createHeadersWithPluginSettings = (
   settings: any,
   header?: HeadersInit,
-): HeadersInit => {
-  return {
-    ...header,
-    [LOBE_PLUGIN_SETTINGS]: typeof settings === 'string' ? settings : JSON.stringify(settings),
-  };
-};
+): HeadersInit => ({
+  ...header,
+  [LOBE_PLUGIN_SETTINGS]: typeof settings === 'string' ? settings : JSON.stringify(settings),
+});
