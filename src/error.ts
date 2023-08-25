@@ -23,10 +23,10 @@ export const PluginErrorType = {
   BadGateway: 502,
   ServiceUnavailable: 503,
   GatewayTimeout: 504,
-};
+} as const;
 /* eslint-enable */
 
-export type IPluginErrorType = keyof typeof PluginErrorType;
+export type IPluginErrorType = (typeof PluginErrorType)[keyof typeof PluginErrorType];
 
 const getStatus = (errorType: IPluginErrorType | string) => {
   switch (errorType) {
