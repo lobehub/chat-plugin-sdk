@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.9.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.9.1...v1.9.2)
+
+<sup>Released on **2023-08-25**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 优化错误编码.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 优化错误编码 ([a9902be](https://github.com/lobehub/chat-plugin-sdk/commit/a9902be))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.9.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.9.0...v1.9.1)
 
 <sup>Released on **2023-08-25**</sup>
