@@ -8,6 +8,10 @@ export enum ErrorType {
 
   PluginManifestNotFound = 'pluginManifestNotFound', // 插件描述文件不存在
   PluginManifestInvalid = 'pluginManifestInvalid', // 插件描述文件不存在
+  // 密码无效
+  InvalidAccessCode = 'InvalidAccessCode',
+  // OpenAI 返回的业务错误
+  OpenAIBizError = 'OpenAIBizError',
 
   // ******* 客户端错误 ******* //
   BadRequest = 400,
