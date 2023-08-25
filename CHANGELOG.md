@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.10.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.9.2...v1.10.0)
+
+<sup>Released on **2023-08-25**</sup>
+
+#### ✨ Features
+
+- **misc**: 细化支持设置、API 等错误类型.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: 细化支持设置、API 等错误类型 ([dad7c64](https://github.com/lobehub/chat-plugin-sdk/commit/dad7c64))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.9.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.9.1...v1.9.2)
 
 <sup>Released on **2023-08-25**</sup>
