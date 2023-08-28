@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.11.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.10.0...v1.11.0)
+
+<sup>Released on **2023-08-28**</sup>
+
+#### ✨ Features
+
+- **misc**: 新增 manifest 请求校验.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: 新增 manifest 请求校验 ([c644a79](https://github.com/lobehub/chat-plugin-sdk/commit/c644a79))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.10.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.9.2...v1.10.0)
 
 <sup>Released on **2023-08-25**</sup>
