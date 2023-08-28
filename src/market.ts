@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { pluginManifestSchema } from './manifest';
+
 export const pluginMetaSchema = z.object({
   author: z.string(),
   createAt: z.string(),
@@ -23,6 +25,7 @@ export const pluginRequestPayloadSchema = z.object({
   arguments: z.string().optional(),
   identifier: z.string(),
   indexUrl: z.string().optional(),
+  manifest: pluginManifestSchema.optional(),
 });
 
 export type PluginRequestPayload = z.infer<typeof pluginRequestPayloadSchema>;
