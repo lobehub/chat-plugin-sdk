@@ -8,12 +8,14 @@ export const PluginErrorType = {
   PluginMetaInvalid: 'PluginMetaInvalid', // 插件元数据无效
 
   PluginManifestNotFound: 'PluginManifestNotFound', // 插件描述文件不存在
-  PluginManifestInvalid: 'PluginManifestInvalid', // 插件描述文件不存在
+  PluginManifestInvalid: 'PluginManifestInvalid', // 插件描述文件格式不正确
 
   PluginSettingsInvalid: 'PluginSettingsInvalid', // 插件设置不正确
 
   PluginApiNotFound: 'PluginApiNotFound', // 插件 API 不存在
   PluginApiParamsError: 'PluginApiParamsError', // 插件 API 请求入参有问题
+
+  PluginServerError: 'PluginServerError', // 插件服务端出错
 
   // ******* 客户端错误 ******* //
   BadRequest: 400,
@@ -41,17 +43,16 @@ const getStatus = (errorType: IPluginErrorType | string) => {
       return 404;
 
     case PluginErrorType.PluginMetaInvalid:
-      return 490;
+    case PluginErrorType.PluginMarketIndexInvalid:
     case PluginErrorType.PluginManifestInvalid:
-      return 491;
-    case PluginErrorType.PluginApiParamsError:
-      return 492;
+      return 490;
 
     case PluginErrorType.PluginMarketIndexNotFound:
       return 590;
 
-    case PluginErrorType.PluginMarketIndexInvalid:
-      return 590;
+    case PluginErrorType.PluginApiParamsError:
+    case PluginErrorType.PluginSettingsInvalid:
+      return 422;
   }
 
   if (typeof errorType === 'number') return errorType;
