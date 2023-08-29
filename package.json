@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/chat-plugin-sdk",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Lobe Chat Plugin SDK, help you to build an amazing chat plugin for Lobe Chat",
   "keywords": [
     "lobehub",
