@@ -13,9 +13,9 @@ export const pluginApiSchema = z.object({
 
 export const pluginManifestSchema = z.object({
   api: z.array(pluginApiSchema),
+  gateway: z.string().optional(),
   identifier: z.string(),
   openapi: z.string().optional(),
-
   settings: JSONSchema.optional(),
   ui: z
     .object({
