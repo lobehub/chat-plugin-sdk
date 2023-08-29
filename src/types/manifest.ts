@@ -34,6 +34,7 @@ export interface LobeChatPluginApi {
  */
 export interface LobeChatPluginManifest {
   api: LobeChatPluginApi[];
+  gateway?: string;
   /**
    * Plugin name
    * @desc The name of the plugin
