@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.14.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.14.0...v1.14.1)
+
+<sup>Released on **2023-09-03**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 精简插件 SDK 提供的方法.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 精简插件 SDK 提供的方法 ([ac10c71](https://github.com/lobehub/chat-plugin-sdk/commit/ac10c71))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.14.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.13.1...v1.14.0)
 
 <sup>Released on **2023-09-03**</sup>
