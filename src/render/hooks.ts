@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { PluginRenderProps } from '@/types';
 
 import { PluginChannel } from './const';
-import { onPluginReady, onReceiveData } from './utils';
+import { onReceiveData } from './utils';
 
 export const useWatchPluginMessage = <T = any>() => {
   const [result, setData] = useState<{ data: T; loading: boolean }>({
@@ -28,17 +28,4 @@ export const useWatchPluginMessage = <T = any>() => {
   }, []);
 
   return result;
-};
-
-export const useOnPluginReady = (onReady: () => void) => {
-  useEffect(() => {
-    const fn = (e: MessageEvent) => {
-      onPluginReady(e, onReady);
-    };
-
-    window.addEventListener('message', fn);
-    return () => {
-      window.removeEventListener('message', fn);
-    };
-  }, []);
 };
