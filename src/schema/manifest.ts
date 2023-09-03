@@ -19,7 +19,10 @@ export const pluginManifestSchema = z.object({
   settings: JSONSchema.optional(),
   ui: z
     .object({
-      url: z.string().optional(),
+      height: z.number().optional(),
+      mode: z.enum(['iframe', 'modules']).optional(),
+      url: z.string(),
+      width: z.number().optional(),
     })
     .optional(),
 });

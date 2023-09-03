@@ -51,12 +51,15 @@ export interface LobeChatPluginManifest {
    * @descCN 插件在用户侧的展示内容
    */
   ui?: {
+    height?: number;
+    mode?: 'iframe' | 'modules';
     /**
      * component url
      * @desc The type of rendering for the plugin
      * @nameCN 动态组件
      * @descCN 插件的渲染类型
      */
-    url?: string;
+    url: string;
+    width?: number;
   };
 }
