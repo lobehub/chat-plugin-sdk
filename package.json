@@ -101,6 +101,9 @@
     "typescript": "^5",
     "vitest": "latest"
   },
+  "peerDependencies": {
+    "react": "^18"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
