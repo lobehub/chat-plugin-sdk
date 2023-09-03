@@ -20,7 +20,7 @@ export const pluginManifestSchema = z.object({
   ui: z
     .object({
       height: z.number().optional(),
-      mode: z.enum(['iframe', 'modules']).optional(),
+      mode: z.enum(['iframe', 'module']).optional(),
       url: z.string(),
       width: z.number().optional(),
     })

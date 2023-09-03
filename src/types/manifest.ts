@@ -52,7 +52,7 @@ export interface LobeChatPluginManifest {
    */
   ui?: {
     height?: number;
-    mode?: 'iframe' | 'modules';
+    mode?: 'iframe' | 'module';
     /**
      * component url
      * @desc The type of rendering for the plugin
