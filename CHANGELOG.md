@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.15.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.14.1...v1.15.0)
+
+<sup>Released on **2023-09-03**</sup>
+
+#### ✨ Features
+
+- **misc**: Update manifest schema.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update manifest schema ([8f6a078](https://github.com/lobehub/chat-plugin-sdk/commit/8f6a078))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.14.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.14.0...v1.14.1)
 
 <sup>Released on **2023-09-03**</sup>
