@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.14.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.13.1...v1.14.0)
+
+<sup>Released on **2023-09-03**</sup>
+
+#### ✨ Features
+
+- **misc**: 提供 render 相关方法.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: 提供 render 相关方法 ([8a73d88](https://github.com/lobehub/chat-plugin-sdk/commit/8a73d88))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.13.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.13.0...v1.13.1)
 
 <sup>Released on **2023-08-29**</sup>
