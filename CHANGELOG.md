@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.16.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.15.2...v1.16.0)
+
+<sup>Released on **2023-09-05**</sup>
+
+#### ✨ Features
+
+- **misc**: Rename to getPluginSettingsFromRequest.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Rename to getPluginSettingsFromRequest ([3969457](https://github.com/lobehub/chat-plugin-sdk/commit/3969457))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.15.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.15.1...v1.15.2)
 
 <sup>Released on **2023-09-05**</sup>
