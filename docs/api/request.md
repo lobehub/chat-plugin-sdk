@@ -1,6 +1,6 @@
 ---
 title: getPluginSettingsFromRequest
-description: 从请求中获取插件设置字符串
+description: 从请求中获取插件设置
 group:
   title: 服务端
   order: 1
