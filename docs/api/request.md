@@ -1,5 +1,5 @@
 ---
-title: getPluginSettingsStringFromRequest
+title: getPluginSettingsFromRequest
 description: 从请求中获取插件设置字符串
 group:
   title: 服务端
@@ -12,7 +12,7 @@ nav: API
 ## 语法
 
 ```ts
-const settings = getPluginSettingsStringFromRequest<T>(req: Request): T | undefined;
+const settings = getPluginSettingsFromRequest<T>(req: Request): T | undefined;
 ```
 
 ## 参数
@@ -30,14 +30,14 @@ const settings = getPluginSettingsStringFromRequest<T>(req: Request): T | undefi
 ```ts
 import {
   createHeadersWithPluginSettings,
-  getPluginSettingsStringFromRequest,
+  getPluginSettingsFromRequest,
 } from '@lobehub/chat-plugin-sdk';
 
 const req = new Request('https://api.example.com', {
   headers: createHeadersWithPluginSettings({ theme: 'dark' }),
 });
 
-const settings = getPluginSettingsStringFromRequest(req);
+const settings = getPluginSettingsFromRequest(req);
 
 console.log(settings); // 输出: { theme: "dark" }
 ```

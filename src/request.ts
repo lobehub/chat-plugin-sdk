@@ -1,6 +1,6 @@
 export const LOBE_PLUGIN_SETTINGS = 'X-LOBE_PLUGIN_SETTINGS';
 
-export const getPluginSettingsStringFromRequest = <T = any>(req: Request): T | undefined => {
+export const getPluginSettingsFromRequest = <T = any>(req: Request): T | undefined => {
   const settings = req.headers.get(LOBE_PLUGIN_SETTINGS);
   if (!settings) return;
 
