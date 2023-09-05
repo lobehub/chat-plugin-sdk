@@ -81,6 +81,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vitest/coverage-v8": "latest",
+    "babel-plugin-antd-style": "^1.0.4",
     "clean-pkg-json": "^1",
     "commitlint": "^17",
     "dumi": "^2",
