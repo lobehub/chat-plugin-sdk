@@ -113,4 +113,6 @@ const JSONSchema = z.object({
 
 这个字段指定了 LobeChat 查询 api 接口的网关。LobeChat 默认的插件网关是云端服务，而自定义插件的请求需要发送给本地服务的，因此通过在 manifest 中指定网关，LobeChat 将会直接请求这个地址，进而访问到本地的插件服务，发布到线上的插件可以不用指定该字段。
 
+## API 与 Schema
+
 关于 manifest 各个字段的完整介绍，参见：[manifest](/api/plugin-manifest)。
