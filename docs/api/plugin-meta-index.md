@@ -8,7 +8,7 @@ nav: API
 
 插件元数据的 Schema。
 
-### 使用示例
+## 使用示例
 
 ```typescript
 import { pluginMetaSchema } from '@lobehub/chat-plugin-sdk';
@@ -33,7 +33,7 @@ console.log(result);
 // 输出：{ author: 'John Doe', createAt: '2022-01-01', homepage: 'http://example.com', identifier: 'plugin-identifier', manifest: 'http://example.com/manifest', meta: { avatar: 'http://example.com/avatar.png', tags: ['tag1', 'tag2'] }, schemaVersion: 1 }
 ```
 
-### Schema 定义
+## Schema 定义
 
 | 属性            | 类型              | 描述                             |
 | --------------- | ----------------- | -------------------------------- |
