@@ -31,7 +31,8 @@
     "client.js"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "father build && npm run build:client",
+    "build:client": "tsc client.ts --declaration",
     "ci": "npm run lint && npm run type-check && npm run test",
     "dev": "father dev",
     "docs:build": "dumi build",

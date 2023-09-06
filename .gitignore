@@ -37,8 +37,12 @@ test-output
 .umi-test
 .dumi
 
+
 # husky
 .husky/prepare-commit-msg
 
 # misc
 # add other ignore file below
+
+client.d.ts
+client.js
