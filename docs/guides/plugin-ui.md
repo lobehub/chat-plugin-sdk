@@ -31,7 +31,7 @@ LobeChat 通过 `iframe` + `postMessage` 实现插件 ui 的加载与通信。�
 你可以通过 [fetchPluginMessage](/api/message) 方法主动向 LobeChat 获取当前消息的数据。
 
 ```tsx | pure
-import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk';
+import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
 import { memo, useEffect, useState } from 'react';
 
 import { ResponseData } from '@/type';
@@ -61,7 +61,7 @@ export default Render;
 你可以通过 [useWatchPluginMessage](/api/use-watch-plugin-message) 方法订阅 LobeChat 向插件发送的消息。
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk';
+import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();
