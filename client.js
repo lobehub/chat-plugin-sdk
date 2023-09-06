@@ -1,1 +1,1 @@
-export * from './es/client';
+export * from './lib/client';
