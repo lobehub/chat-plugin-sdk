@@ -2,6 +2,6 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "exclude": ["example"],
+  "exclude": ["example", "client.ts"],
   "extends": "./tsconfig.json"
 }
