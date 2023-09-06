@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.17.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.0...v1.17.0)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### ✨ Features
+
+- **misc**: Refactor the react usage to client exports.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Refactor the react usage to client exports ([51e8da9](https://github.com/lobehub/chat-plugin-sdk/commit/51e8da9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.16.1-alpha.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.3...v1.16.1-alpha.4)
 
 <sup>Released on **2023-09-06**</sup>
