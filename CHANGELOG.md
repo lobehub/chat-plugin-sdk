@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.17.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.1...v1.17.2)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 修正 nextjs ssr 的兼容性问题.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 修正 nextjs ssr 的兼容性问题 ([4bb09a0](https://github.com/lobehub/chat-plugin-sdk/commit/4bb09a0))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.17.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.0...v1.17.1)
 
 <sup>Released on **2023-09-06**</sup>
