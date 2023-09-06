@@ -24,29 +24,30 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./es/index.js",
-      "require": "./lib/index.js",
-      "default": "./es/index.js",
-      "types": "./lib/index.d.ts"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts"
     },
     "./react": {
-      "import": {
-        "types": "./es/react/index.d.ts",
-        "default": "./es/react/index.js"
-      },
-      "require": {
-        "types": "./lib/react/index.d.ts",
-        "node": "./lib/react/index.js",
-        "default": "./lib/react/index.js"
-      }
+      "types": "./dist/cjs/react.d.ts",
+      "require": "./dist/cjs/react.js",
+      "import": "./dist/esm/react.js"
+    },
+    "./*": [
+      "./*",
+      "./*.d.ts"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./*",
+        "./dist/*"
+      ]
     }
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "lib/index.d.ts",
   "files": [
-    "lib",
-    "es"
+    "dist"
   ],
   "scripts": {
     "build": "father build",
