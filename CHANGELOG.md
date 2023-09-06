@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.16.1-alpha.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.3...v1.16.1-alpha.4)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor to client mode.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor to client mode ([035a990](https://github.com/lobehub/chat-plugin-sdk/commit/035a990))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.16.1-alpha.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.2...v1.16.1-alpha.3)
 
 <sup>Released on **2023-09-06**</sup>
