@@ -16,7 +16,7 @@ const { data, loading } = useWatchPluginMessage<T>();
 ## 示例
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk';
+import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();

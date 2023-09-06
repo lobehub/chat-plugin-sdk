@@ -1,4 +1,3 @@
-export * from './browser';
 export * from './error';
 export * from './request';
 export * from './schema/manifest';

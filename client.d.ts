@@ -1,1 +1,1 @@
-export * from './es/react';
+export * from './es/client';

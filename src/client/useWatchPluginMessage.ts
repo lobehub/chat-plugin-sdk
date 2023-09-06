@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import { PluginChannel } from '@/browser';
-import { onReceiveData } from '@/browser/utils';
-import { PluginRenderProps } from '@/types';
+import { PluginChannel } from './const';
+import { PluginRenderProps } from './type';
+import { onReceiveData } from './utils';
 
 export const useWatchPluginMessage = <T = any>() => {
   const [result, setData] = useState<{ data: T; loading: boolean }>({
