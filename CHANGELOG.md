@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.16.1-alpha.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.2...v1.16.1-alpha.3)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Try to fix build.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Try to fix build ([0887276](https://github.com/lobehub/chat-plugin-sdk/commit/0887276))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.16.1-alpha.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.1...v1.16.1-alpha.2)
 
 <sup>Released on **2023-09-06**</sup>
