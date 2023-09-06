@@ -2,6 +2,106 @@
 
 # Changelog
 
+### [Version 1.16.1-alpha.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.3...v1.16.1-alpha.4)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor to client mode.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor to client mode ([035a990](https://github.com/lobehub/chat-plugin-sdk/commit/035a990))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.16.1-alpha.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.2...v1.16.1-alpha.3)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Try to fix build.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Try to fix build ([0887276](https://github.com/lobehub/chat-plugin-sdk/commit/0887276))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.16.1-alpha.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.1-alpha.1...v1.16.1-alpha.2)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Try to fix build.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Try to fix build ([abda1a2](https://github.com/lobehub/chat-plugin-sdk/commit/abda1a2))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.16.1-alpha.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.16.0...v1.16.1-alpha.1)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix export.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix export ([9834327](https://github.com/lobehub/chat-plugin-sdk/commit/9834327))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.16.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.15.2...v1.16.0)
 
 <sup>Released on **2023-09-05**</sup>

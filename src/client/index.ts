@@ -1,3 +1,4 @@
 export * from './const';
-export * from './hooks';
 export { fetchPluginMessage } from './message';
+export * from './type';
+export * from './useWatchPluginMessage';

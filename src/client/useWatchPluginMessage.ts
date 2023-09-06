@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { PluginRenderProps } from '@/types';
-
 import { PluginChannel } from './const';
+import { PluginRenderProps } from './type';
 import { onReceiveData } from './utils';
 
 export const useWatchPluginMessage = <T = any>() => {

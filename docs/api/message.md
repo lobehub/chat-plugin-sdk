@@ -22,7 +22,7 @@ export const fetchPluginMessage = <T = any>() => Promise<T>;
 ### 示例
 
 ```ts
-import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk';
+import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
 
 fetchPluginMessage()
   .then((message) => {
