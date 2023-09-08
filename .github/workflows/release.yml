@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - master
-      - alpha
-      - beta
-      - rc
 
 jobs:
   test:
@@ -27,8 +24,8 @@ jobs:
       - name: Install deps
         run: pnpm install
 
-      - name: lint
-        run: pnpm run lint && pnpm run doctor
+      - name: CI
+        run: pnpm run ci
 
       - name: Test
         run: pnpm run test

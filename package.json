@@ -33,7 +33,7 @@
   "scripts": {
     "build": "father build && npm run build:client",
     "build:client": "tsc client.ts --declaration",
-    "ci": "npm run lint && npm run type-check && npm run test",
+    "ci": "npm run lint && npm run type-check && npm run doctor",
     "dev": "father dev",
     "docs:build": "dumi build",
     "docs:dev": "dumi dev",
@@ -106,7 +106,8 @@
     "vitest": "latest"
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "publishConfig": {
     "access": "public",

@@ -1,20 +1,25 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
+    "sourceMap": true,
+    "skipDefaultLibCheck": true,
     "jsx": "react-jsx",
-    "types": ["vitest/globals"],
     "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
     "paths": {
       "@@/*": ["example/.dumi/tmp/*"],
       "@/*": ["src/*"],
       "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
       "chat-plugin-sdk": ["src"],
       "chat-plugin-sdk/*": ["src/*", "*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "include": ["src", "tests", ".dumi/**/*", "typings", "example/.dumirc.ts", "*.ts"]
 }

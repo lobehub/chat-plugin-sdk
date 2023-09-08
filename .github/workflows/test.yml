@@ -20,7 +20,7 @@ jobs:
       - name: Install deps
         run: pnpm install
 
-      - name: lint
+      - name: CI
         run: pnpm run ci
 
       - name: Test and coverage
