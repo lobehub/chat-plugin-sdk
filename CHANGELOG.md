@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.17.7](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.6...v1.17.7)
+
+<sup>Released on **2023-09-09**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Bump father version.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Bump father version ([5b08144](https://github.com/lobehub/chat-plugin-sdk/commit/5b08144))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.17.7-beta.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.6...v1.17.7-beta.1)
 
 <sup>Released on **2023-09-09**</sup>
