@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.17.6](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.5...v1.17.6)
+
+<sup>Released on **2023-09-09**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix tsconfig.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix tsconfig ([ef1fb70](https://github.com/lobehub/chat-plugin-sdk/commit/ef1fb70))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.17.5](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.4...v1.17.5)
 
 <sup>Released on **2023-09-09**</sup>
