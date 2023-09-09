@@ -90,7 +90,7 @@
     "dumi": "^2",
     "dumi-theme-lobehub": "latest",
     "eslint": "^8",
-    "father": "4.3.1",
+    "father": "^4",
     "husky": "^8",
     "jsdom": "^22",
     "leva": "^0",
