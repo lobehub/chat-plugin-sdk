@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.1",
-    "@types/json-schema": "^7.0.12",
+    "@types/json-schema": "^7.0.13",
     "zod": "^3.22.2"
   },
   "devDependencies": {
