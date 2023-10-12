@@ -1,4 +1,4 @@
-export const LOBE_PLUGIN_SETTINGS = 'X-LOBE_PLUGIN_SETTINGS';
+export const LOBE_PLUGIN_SETTINGS = 'X-Lobe-Plugin-Settings';
 
 export const getPluginSettingsFromRequest = <T = any>(req: Request): T | undefined => {
   const settings = req.headers.get(LOBE_PLUGIN_SETTINGS);
