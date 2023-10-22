@@ -45,6 +45,11 @@ export interface LobeChatPluginManifest {
   openapi?: string;
   settings?: PluginSchema;
   /**
+   * plugin runtime type
+   * @default default
+   */
+  type?: 'standalone' | 'default';
+  /**
    * plugin ui on user side
    * @desc The type of rendering for the plugin
    * @nameCN 用户界面
