@@ -2,6 +2,32 @@
 
 # Changelog
 
+## [Version 1.18.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.8...v1.18.0)
+
+<sup>Released on **2023-10-23**</sup>
+
+#### ✨ Features
+
+- **misc**: Support manifest type, support standalone plugin.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support manifest type ([b0e4f1c](https://github.com/lobehub/chat-plugin-sdk/commit/b0e4f1c))
+- **misc**: Support standalone plugin ([7b7a4a6](https://github.com/lobehub/chat-plugin-sdk/commit/7b7a4a6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.17.8](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.7...v1.17.8)
 
 <sup>Released on **2023-10-12**</sup>
