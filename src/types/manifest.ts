@@ -1,5 +1,6 @@
 import { JSONSchema7 } from 'json-schema';
 
+export type LobePluginType = 'default' | 'standalone';
 /**
  * Plugin Schema
  * @desc the schema of plugin, de´scribe the api input of the function
@@ -48,7 +49,7 @@ export interface LobeChatPluginManifest {
    * plugin runtime type
    * @default default
    */
-  type?: 'standalone' | 'default';
+  type?: LobePluginType;
   /**
    * plugin ui on user side
    * @desc The type of rendering for the plugin

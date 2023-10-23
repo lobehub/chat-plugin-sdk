@@ -26,6 +26,7 @@ export const pluginRequestPayloadSchema = z.object({
   identifier: z.string(),
   indexUrl: z.string().optional(),
   manifest: pluginManifestSchema.optional(),
+  type: z.string().optional(),
 });
 
 export type PluginRequestPayload = z.infer<typeof pluginRequestPayloadSchema>;

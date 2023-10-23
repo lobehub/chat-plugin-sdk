@@ -1,7 +1,7 @@
-import { PluginChannel } from './const';
-import { onReceiveData } from './utils';
+import { PluginChannel } from '../const';
+import { onReceiveData } from '../utils';
 
-export const fetchPluginMessage = <T = any>() =>
+export const fetchPluginState = <T = any>() =>
   new Promise<T>((resolve) => {
     const receiverData = (e: MessageEvent) => {
       onReceiveData(e, (data) => {
@@ -12,5 +12,5 @@ export const fetchPluginMessage = <T = any>() =>
 
     window.addEventListener('message', receiverData);
 
-    top?.postMessage({ type: PluginChannel.fetchPluginMessage }, '*');
+    top?.postMessage({ type: PluginChannel.fetchPluginState }, '*');
   });
