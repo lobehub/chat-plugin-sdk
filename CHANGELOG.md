@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.20.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.19.0...v1.20.0)
+
+<sup>Released on **2023-10-24**</sup>
+
+#### ✨ Features
+
+- **misc**: Support plugin settings.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support plugin settings ([3a9553f](https://github.com/lobehub/chat-plugin-sdk/commit/3a9553f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.19.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.18.1...v1.19.0)
 
 <sup>Released on **2023-10-24**</sup>
