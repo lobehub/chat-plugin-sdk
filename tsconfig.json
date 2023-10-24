@@ -23,5 +23,5 @@
     "types": ["vitest/globals"]
   },
   "exclude": ["client.ts"],
-  "include": ["src", "tests", ".dumi/**/*", "typings", "example/.dumirc.ts", "*.ts"]
+  "include": ["src", "tests", "typings", "example/.dumirc.ts", "*.ts"]
 }

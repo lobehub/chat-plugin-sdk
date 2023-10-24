@@ -20,11 +20,11 @@ export interface LobeChatPluginApi {
   parameters: PluginSchema;
   /**
    * Endpoint URL
-   * @desc The endpoint URL of the plugin
+   * @desc The endpoint URL of the plugin, optional in standalone type
    * @nameCN 服务端接口
-   * @descCN 插件服务端的接口地址 URL
+   * @descCN 插件服务端的接口地址 URL, 在 standalone 类型下是可选项
    */
-  url: string;
+  url?: string;
 }
 
 /**

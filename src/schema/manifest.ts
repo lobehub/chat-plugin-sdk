@@ -8,7 +8,7 @@ export const pluginApiSchema = z.object({
   description: z.string(),
   name: z.string(),
   parameters: JSONSchema,
-  url: z.string().url(),
+  url: z.string().url().optional(),
 });
 
 export const pluginManifestSchema = z.object({
