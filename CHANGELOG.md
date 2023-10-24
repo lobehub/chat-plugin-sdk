@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.18.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.18.0...v1.18.1)
+
+<sup>Released on **2023-10-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix fetchPluginState bug.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix fetchPluginState bug ([d2ff3b6](https://github.com/lobehub/chat-plugin-sdk/commit/d2ff3b6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.18.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.17.8...v1.18.0)
 
 <sup>Released on **2023-10-23**</sup>
