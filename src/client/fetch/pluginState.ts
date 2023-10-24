@@ -1,10 +1,10 @@
 import { PluginChannel } from '../const';
 
-export const fetchPluginState = <T = any>() =>
+export const fetchPluginState = <T = any>(key: string) =>
   new Promise<T>((resolve) => {
     const receiverData = (e: MessageEvent) => {
-      if (e.data.type === PluginChannel.renderPluginState) {
-        resolve(e.data.props);
+      if (e.data.type === PluginChannel.renderPluginState && e.data.key === key) {
+        resolve(e.data.value);
 
         window.removeEventListener('message', receiverData);
       }
@@ -12,5 +12,5 @@ export const fetchPluginState = <T = any>() =>
 
     window.addEventListener('message', receiverData);
 
-    top?.postMessage({ type: PluginChannel.fetchPluginState }, '*');
+    top?.postMessage({ key, type: PluginChannel.fetchPluginState }, '*');
   });

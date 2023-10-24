@@ -4,6 +4,6 @@ export const postToFillPluginContent = (content: any) => {
   top?.postMessage({ content, type: PluginChannel.fillStandalonePluginContent }, '*');
 };
 
-export const postToUpdatePluginState = (state: any) => {
-  top?.postMessage({ state, type: PluginChannel.updatePluginState }, '*');
+export const postToUpdatePluginState = (key: string, value: any) => {
+  top?.postMessage({ key, type: PluginChannel.updatePluginState, value }, '*');
 };
