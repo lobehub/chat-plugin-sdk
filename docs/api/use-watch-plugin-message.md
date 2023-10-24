@@ -2,7 +2,12 @@
 title: useWatchPluginMessage
 description: 监听获取 LobeChat 发过来的插件消息
 nav: API
-group: 前端渲染
+order: 1
+group:
+  title: Hooks
+  order: 10
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk/client'
 ---
 
 `useWatchPluginMessage` 是 Chat Plugin SDK 封装一个的 React Hook，用于监听从 LobeChat 发过来的插件消息。

@@ -1,9 +1,9 @@
 ---
 title: fetchPluginMessage
 description: 该方法用于从插件通道获取插件消息
-group:
-  title: 前端渲染
-  order: 10
+group: 通信方法
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk/client'
 nav: API
 ---
 
@@ -21,7 +21,7 @@ export const fetchPluginMessage = <T = any>() => Promise<T>;
 
 ### 示例
 
-```ts
+```ts | pure
 import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
 
 fetchPluginMessage()

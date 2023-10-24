@@ -9,7 +9,7 @@ group: 快速上手
 
 这个模板项目使用了 Next.js 作为开发框架，它的核心目录结构如下：
 
-```
+```text
 ➜  chat-plugin-template
 ├── public
 │   └── manifest-dev.json            # 描述清单文件
@@ -44,7 +44,7 @@ git clone https://github.com/lobehub/chat-plugin-template.git
 - 替换标题：将 `Template` 替换为你的项目名，例如 `Open Interpreter`；
 - 替换图标：将 `package.webp` 替换为你的项目图标名称，你可以在 [emojipedia](https://emojipedia.org/) 上查找满意的图标，或者直接使用 Logo 的 URL；
 - 替换简介：将 `This is the plugin template for LobeChat plugin...` 替换为你的项目一句话介绍；
-- 替换特性描述：将特性部分替换为你的项目特性描述，可以借助 [Markdown 特性描述专家]，帮你快速生成美观的特性描述；
+- 替换特性描述：将特性部分替换为你的项目特性描述，可以借助 \[Markdown 特性描述专家]，帮你快速生成美观的特性描述；
 - 替换使用方法：将 usage 部分替换为你的项目使用方法；
 
 完成以上步骤，你就完成了仓库项目基本信息的修改，获得和 LobeChat 官方插件风格气质一致的项目介绍文档。
