@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.20.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.20.0...v1.20.1)
+
+<sup>Released on **2023-10-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 修正 standalone 模式下的 manifest 类型问题.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 修正 standalone 模式下的 manifest 类型问题 ([a1979db](https://github.com/lobehub/chat-plugin-sdk/commit/a1979db))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.20.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.19.0...v1.20.0)
 
 <sup>Released on **2023-10-24**</sup>
