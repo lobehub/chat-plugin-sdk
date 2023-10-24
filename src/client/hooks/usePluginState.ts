@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { fetchPluginState, postToUpdatePluginState } from '@/client';
+import { fetchPluginState } from '@/client/fetch';
+import { postToUpdatePluginState } from '@/client/postMessage';
 
 export const usePluginState = <T>(key: string, initialValue: T) => {
   const [value, setValue] = useState(initialValue);
