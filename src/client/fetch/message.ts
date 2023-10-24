@@ -1,13 +1,16 @@
+import { PluginRenderProps } from '@/client';
+
 import { PluginChannel } from '../const';
-import { onReceiveData } from '../utils';
 
 export const fetchPluginMessage = <T = any>() =>
   new Promise<T>((resolve) => {
     const receiverData = (e: MessageEvent) => {
-      onReceiveData(e, (data) => {
-        resolve(data.content as T);
+      if (e.data.type === PluginChannel.renderPlugin) {
+        const props = e.data.props as PluginRenderProps<T>;
+        resolve(props.content as T);
+
         window.removeEventListener('message', receiverData);
-      });
+      }
     };
 
     window.addEventListener('message', receiverData);
