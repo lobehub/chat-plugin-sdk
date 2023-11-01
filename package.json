@@ -86,7 +86,7 @@
     "@vitest/coverage-v8": "latest",
     "babel-plugin-antd-style": "^1.0.4",
     "clean-pkg-json": "^1",
-    "commitlint": "^17",
+    "commitlint": "^18",
     "dumi": "^2",
     "dumi-theme-lobehub": "latest",
     "eslint": "^8",
