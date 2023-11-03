@@ -32,7 +32,7 @@ order: 3
 }
 ```
 
-当开启该插件后，在 LobeChat 中就会展示出一个输入框，用于输入 SerpAPI 的 API Key,如下图所示：
+当开启该插件后，在 LobeChat 中就会展示出一个输入框，用于输入 SerpAPI 的 API Key, 如下图所示：
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265733057-9043ce79-0e78-40bc-98fa-be594eaa9212.png)
 

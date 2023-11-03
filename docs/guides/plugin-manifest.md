@@ -53,7 +53,7 @@ manifest 聚合了插件功能如何实现的信息。核心的字段为 `api` �
 
 ## `api`
 
-这是一个数组，包含了插件所提供的所有 API 接口信息。每个接口都包含了url、name、description和 parameters 字段，均为必填项。
+这是一个数组，包含了插件所提供的所有 API 接口信息。每个接口都包含了 url、name、description 和 parameters 字段，均为必填项。
 
 其中 `description` 和 `parameters` 两个字段，将会作为 [Function Call](https://sspai.com/post/81986) 的 `functions` 参数发送给 gpt，示例如下：
 
