@@ -10,8 +10,6 @@
 
 SDK for LobeChat funciton calling plugins
 
-[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
-
 [![][🤯-🧩-lobehub-shield]][🤯-🧩-lobehub-link]
 [![][npm-release-shield]][npm-release-link]
 [![][github-releasedate-shield]][github-releasedate-link]
