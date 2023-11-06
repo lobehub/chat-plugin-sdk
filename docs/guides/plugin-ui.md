@@ -28,10 +28,10 @@ LobeChat 通过 `iframe` + `postMessage` 实现插件 ui 的加载与通信。�
 
 ### 插件主动请求
 
-你可以通过 [fetchPluginMessage](/api/message) 方法主动向 LobeChat 获取当前消息的数据。
+你可以通过 [lobeChat](/api/lobe-chat-client) 的 `getPluginMessage` 方法主动向 LobeChat 获取当前消息的数据。
 
 ```tsx | pure
-import { fetchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
 import { memo, useEffect, useState } from 'react';
 
 import { ResponseData } from '@/type';
@@ -41,7 +41,7 @@ const Render = memo(() => {
 
   useEffect(() => {
     // 从 LobeChat 获取当前插件的消息
-    fetchPluginMessage().then((e: ResponseData) => {
+    lobeChat.getPluginMessage().then((e: ResponseData) => {
       setData(e);
     });
   }, []);
@@ -53,7 +53,7 @@ export default Render;
 ```
 
 :::info
-`fetchPluginMessage` 方法是一个普通的异步请求方法，因此可以搭配 `swr` 或 `react-query` 实现数据的缓存与自动更新，达到更加优良的用户体验。
+`lobeChat.getPluginMessage` 方法是一个普通的异步请求方法，因此可以搭配 `swr` 或 `react-query` 实现数据的缓存与自动更新，达到更加优良的用户体验。
 :::
 
 ### 接受 LobeChat 推送
