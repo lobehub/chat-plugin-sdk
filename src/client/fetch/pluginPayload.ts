@@ -3,9 +3,10 @@ import { PluginRequestPayload } from '@/schema/market';
 import { PluginChannel } from '../const';
 
 export interface PluginPayload<T = any> {
-  args?: T;
-  func: string;
+  arguments?: T;
+  name: string;
 }
+
 export const fetchPluginPayload = <T = any>() =>
   new Promise<PluginPayload<T>>((resolve) => {
     const receiverData = (e: MessageEvent) => {
@@ -13,7 +14,7 @@ export const fetchPluginPayload = <T = any>() =>
         const payload = e.data.props as PluginRequestPayload;
         const func = payload.apiName;
         const args = JSON.parse(payload.arguments || '{}');
-        resolve({ args, func });
+        resolve({ arguments: args, name: func });
 
         window.removeEventListener('message', receiverData);
       }
