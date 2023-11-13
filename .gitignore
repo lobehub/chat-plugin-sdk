@@ -47,3 +47,4 @@ test-output
 client.d.ts
 client.js
 bun.lockb
+schema.json
