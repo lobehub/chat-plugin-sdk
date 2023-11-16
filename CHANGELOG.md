@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.23.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.22.0...v1.23.0)
+
+<sup>Released on **2023-11-16**</sup>
+
+#### ✨ Features
+
+- **misc**: Add json schema definition of manifest.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add json schema definition of manifest, closes [#35](https://github.com/lobehub/chat-plugin-sdk/issues/35) ([8032ce8](https://github.com/lobehub/chat-plugin-sdk/commit/8032ce8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.22.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.21.0...v1.22.0)
 
 <sup>Released on **2023-11-06**</sup>
