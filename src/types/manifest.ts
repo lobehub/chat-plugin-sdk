@@ -34,6 +34,7 @@ export interface LobeChatPluginApi {
  * @descCN 描述一个插件的构成要素
  */
 export interface LobeChatPluginManifest {
+  $schema?: string;
   api: LobeChatPluginApi[];
   gateway?: string;
   /**
@@ -68,4 +69,5 @@ export interface LobeChatPluginManifest {
     url: string;
     width?: number;
   };
+  version?: '1';
 }

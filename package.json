@@ -28,11 +28,13 @@
     "lib",
     "es",
     "client.d.ts",
-    "client.js"
+    "client.js",
+    "schema.json"
   ],
   "scripts": {
-    "build": "father build && npm run build:client",
+    "build": "father build && npm run build:client && npm run build:schema",
     "build:client": "tsc client.ts --declaration",
+    "build:schema": "ts-json-schema-generator --path src/types/manifest.ts --type LobeChatPluginManifest -o schema.json",
     "ci": "npm run lint && npm run type-check && npm run doctor",
     "dev": "father dev",
     "docs:build": "dumi build",
@@ -102,6 +104,7 @@
     "remark-cli": "^11",
     "semantic-release": "^21",
     "stylelint": "^15",
+    "ts-json-schema-generator": "^1.4.0",
     "typescript": "^5",
     "vitest": "latest"
   },

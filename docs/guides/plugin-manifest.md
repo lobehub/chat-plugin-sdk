@@ -12,6 +12,7 @@ manifest 聚合了插件功能如何实现的信息。核心的字段为 `api` �
 
 ```json
 {
+  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
   "api": [
     {
       "url": "http://localhost:3400/api/clothes",
@@ -116,3 +117,38 @@ const JSONSchema = z.object({
 ## API 与 Schema
 
 关于 manifest 各个字段的完整介绍，参见：[manifest](/api/plugin-manifest)。
+
+## JSON 类型提示
+
+SDK 提供了 manifest 的 JSON Schema 定义，它可以用于在编写 `manifest.json` 文件时为 IDE 提供类型信息和智能提示。
+
+使用时你只需为 JSON 配置文件声明 `$schema` 字段来指向 schema 定义文件即可，以 [lobehub/chat-plugin-template](https://github.com/lobehub/chat-plugin-template/blob/main/public/manifest-dev.json) 为例，它的项目结构为：
+
+```plaintext
+lobehub/chat-plugin-template
+├── CHANGELOG.md
+├── node_modules
+├── README.md
+├── src
+├── public
+│   ├── foo.json
+│   ├── manifest-dev.json
+│   └── manifest-standalone.json
+└── package.json
+```
+
+那么 `manifest-dev.json` 的 `$schema` 字段可以配置为这样的相对路径：
+
+```json filename=manifest-dev.json
+{
+  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "api": [],
+  "gateway": "http://localhost:3400/api/gateway",
+  "identifier": "plugin-identifier",
+  "ui": {
+    "url": "http://localhost:3400",
+    "height": 200
+  },
+  "version": "1"
+}
+```
