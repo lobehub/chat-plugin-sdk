@@ -9,11 +9,11 @@ export const fetchPluginMessage = <T = any>() =>
         const props = e.data.props as PluginRenderProps<T>;
         resolve(props.content as T);
 
-        window.removeEventListener('message', receiverData);
+        window?.removeEventListener('message', receiverData);
       }
     };
 
-    window.addEventListener('message', receiverData);
+    window?.addEventListener('message', receiverData);
 
     top?.postMessage({ type: PluginChannel.fetchPluginMessage }, '*');
   });

@@ -17,12 +17,12 @@ export const useWatchPluginMessage = <T = any>() => {
   };
 
   useEffect(() => {
-    window.addEventListener('message', receiverData);
+    window?.addEventListener('message', receiverData);
 
     top?.postMessage({ type: PluginChannel.pluginReadyForRender }, '*');
 
     return () => {
-      window.removeEventListener('message', receiverData);
+      window?.removeEventListener('message', receiverData);
     };
   }, []);
 

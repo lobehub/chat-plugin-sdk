@@ -6,11 +6,11 @@ export const fetchPluginSettings = <T = any>() =>
       if (e.data.type === PluginChannel.renderPluginSettings) {
         resolve(e.data.value);
 
-        window.removeEventListener('message', receiverData);
+        window?.removeEventListener('message', receiverData);
       }
     };
 
-    window.addEventListener('message', receiverData);
+    window?.addEventListener('message', receiverData);
 
     top?.postMessage({ type: PluginChannel.fetchPluginSettings }, '*');
   });

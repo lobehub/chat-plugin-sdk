@@ -6,11 +6,11 @@ export const fetchPluginState = <T = any>(key: string) =>
       if (e.data.type === PluginChannel.renderPluginState && e.data.key === key) {
         resolve(e.data.value);
 
-        window.removeEventListener('message', receiverData);
+        window?.removeEventListener('message', receiverData);
       }
     };
 
-    window.addEventListener('message', receiverData);
+    window?.addEventListener('message', receiverData);
 
     top?.postMessage({ key, type: PluginChannel.fetchPluginState }, '*');
   });
