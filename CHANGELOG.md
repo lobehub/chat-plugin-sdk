@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.23.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.23.1...v1.23.2)
+
+<sup>Released on **2023-11-21**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix compatible with ssr.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix compatible with ssr ([2337060](https://github.com/lobehub/chat-plugin-sdk/commit/2337060))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.23.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.23.0...v1.23.1)
 
 <sup>Released on **2023-11-20**</sup>
