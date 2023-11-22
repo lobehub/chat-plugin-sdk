@@ -48,7 +48,7 @@ SDK for LobeChat funciton calling plugins
 
 The LobeChat Plugin SDK assists you in creating exceptional chat plugins for Lobe Chat.
 
-> **Important**\
+> \[!Important]
 > [📘 SDK Document](https://chat-plugin-sdk.lobehub.com) - <https://chat-plugin-sdk.lobehub.com>
 
 <div align="right">
