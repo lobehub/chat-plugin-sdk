@@ -31,6 +31,8 @@ type GetPluginPayload = <T = any>() => Promise<PluginPayload<T>>;
 
 - `name`: Function Call 的 api 名称
 - `arguments`: Function Call 的参数对象
+- `state`: 如果该消息存在 state，则可通过该值获取到
+- `settings`: 插件的设置信息
 
 #### 示例
 
@@ -40,7 +42,6 @@ import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
 lobeChat.getPluginPayload().then((payload) => {
   console.log(payload);
 });
-
 // payload:
 // {
 //   name: 'showMJ',

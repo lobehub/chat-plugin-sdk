@@ -31,6 +31,8 @@ type GetPluginPayload = <T = any>() => Promise<PluginPayload<T>>;
 
 - `name`: the api name of the Function Call
 - `arguments`: the parameter object of the Function Call
+- `state`: if exist the plugin message have state, you can get it from thi
+- `settings`: the plugin settings
 
 #### Example
 
