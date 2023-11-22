@@ -3,7 +3,7 @@
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "..",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -14,14 +14,11 @@
     "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@@/*": ["example/.dumi/tmp/*"],
-      "@/*": ["src/*"],
-      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
-      "chat-plugin-sdk": ["src"],
-      "chat-plugin-sdk/*": ["src/*", "*"]
+      "@/*": [".src/*"],
+      "@lobehub/chat-plugin-sdk": ["./src"],
+      "@lobehub/chat-plugin-sdk/client": ["./src/client"]
     },
     "types": ["vitest/globals"]
   },
-  "exclude": ["client.ts", "tests"],
-  "include": ["src", "typings", "example/.dumirc.ts", "*.ts"]
+  "include": ["./client"]
 }

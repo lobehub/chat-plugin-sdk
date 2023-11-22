@@ -83,6 +83,7 @@
     "@commitlint/cli": "^18",
     "@lobehub/i18n-cli": "^1.10.0",
     "@lobehub/lint": "latest",
+    "@testing-library/react": "^14.1.2",
     "@types/lodash-es": "^4",
     "@types/node": "^20",
     "@types/react": "^18",

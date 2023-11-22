@@ -26,6 +26,7 @@ export const fetchPluginPayload = <T = any>() =>
     }
     const receiverData = (e: MessageEvent) => {
       if (e.data.type === PluginChannel.initStandalonePlugin) {
+        // TODO: drop e.data.props in v2
         const payload: PluginRequestPayload = e.data.payload || e.data.props;
         const func = payload.apiName;
         const args = JSON.parse(payload.arguments || '{}');
