@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.25.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.24.0...v1.25.0)
+
+<sup>Released on **2023-12-02**</sup>
+
+#### ✨ Features
+
+- **misc**: Add basic info to plugin manifest.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add basic info to plugin manifest ([b50978e](https://github.com/lobehub/chat-plugin-sdk/commit/b50978e))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.24.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.23.2...v1.24.0)
 
 <sup>Released on **2023-11-22**</sup>
