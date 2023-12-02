@@ -13,8 +13,17 @@ export const pluginApiSchema = z.object({
 
 export const pluginManifestSchema = z.object({
   api: z.array(pluginApiSchema),
+  author: z.string().optional(),
+  createAt: z.string().optional(),
   gateway: z.string().optional(),
+  homepage: z.string().optional(),
   identifier: z.string(),
+  meta: z.object({
+    avatar: z.string().optional(),
+    description: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    title: z.string().optional(),
+  }),
   openapi: z.string().optional(),
   settings: JSONSchema.optional(),
   ui: z
