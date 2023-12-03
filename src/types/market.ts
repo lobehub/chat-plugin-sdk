@@ -30,12 +30,16 @@ export interface LobeChatPluginsMarketIndex {
 export interface LobeChatPluginMeta {
   author: string;
   /**
+   * @deprecated
+   */
+  createAt?: string;
+  /**
    * createAt
    * @desc Creation date of the plugin
    * @nameCN 创建时间
    * @descCN 插件的创建时间
    */
-  createAt: string;
+  createdAt: string;
   /**
    * homepage
    * @desc Homepage of the plugin

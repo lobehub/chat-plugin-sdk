@@ -1,5 +1,7 @@
 import { JSONSchema7 } from 'json-schema';
 
+import { Meta } from './market';
+
 export type LobePluginType = 'default' | 'standalone';
 /**
  * Plugin Schema
@@ -36,7 +38,22 @@ export interface LobeChatPluginApi {
 export interface LobeChatPluginManifest {
   $schema?: string;
   api: LobeChatPluginApi[];
+  author?: string;
+  /**
+   * createAt
+   * @desc Creation date of the plugin
+   * @nameCN 创建时间
+   * @descCN 插件的创建时间
+   */
+  createdAt?: string;
   gateway?: string;
+  /**
+   * homepage
+   * @desc Homepage of the plugin
+   * @nameCN 主页
+   * @descCN 插件的主页
+   */
+  homepage?: string;
   /**
    * Plugin name
    * @desc The name of the plugin
@@ -44,6 +61,13 @@ export interface LobeChatPluginManifest {
    * @descCN 插件的名称，需要和提交到 LobeChat Plugins 仓库的插件名称一致
    */
   identifier: string;
+  /**
+   * metadata
+   * @desc Meta data of the plugin
+   * @nameCN 插件元数据
+   * @descCN 包含图片与标签等
+   */
+  meta: Meta;
   openapi?: string;
   settings?: PluginSchema;
   /**
