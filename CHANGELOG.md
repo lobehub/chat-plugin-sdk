@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.27.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.26.0...v1.27.0)
+
+<sup>Released on **2023-12-12**</sup>
+
+#### ✨ Features
+
+- **misc**: Support more error type.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support more error type ([bdcffbf](https://github.com/lobehub/chat-plugin-sdk/commit/bdcffbf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.26.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.25.0...v1.26.0)
 
 <sup>Released on **2023-12-03**</sup>
