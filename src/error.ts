@@ -17,6 +17,9 @@ export const PluginErrorType = {
 
   PluginServerError: 'PluginServerError', // 插件服务端出错
 
+  PluginGatewayError: 'PluginGatewayError', // 插件网关出错
+  PluginOpenApiInitError: 'PluginOpenApiInitError', // 插件 OpenAPI 初始化失败
+
   // ******* 客户端错误 ******* //
   BadRequest: 400,
   Unauthorized: 401,
