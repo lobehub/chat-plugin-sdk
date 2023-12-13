@@ -38,7 +38,7 @@ export const PluginErrorType = {
 
 export type IPluginErrorType = (typeof PluginErrorType)[keyof typeof PluginErrorType];
 
-const getStatus = (errorType: IPluginErrorType | string) => {
+export const getPluginErrorStatus = (errorType: IPluginErrorType | string) => {
   switch (errorType) {
     case PluginErrorType.PluginApiNotFound:
     case PluginErrorType.PluginMetaNotFound:
@@ -79,7 +79,7 @@ export const createErrorResponse = (
   body?: string | object,
 ): Response => {
   // 获取错误类型对应的状态码
-  const statusCode = getStatus(errorType);
+  const statusCode = getPluginErrorStatus(errorType);
 
   // 构造错误响应数据
   const data: ErrorResponse = { body, errorType };
