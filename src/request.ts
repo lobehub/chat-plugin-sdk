@@ -11,6 +11,19 @@ export const getPluginSettingsFromRequest = <T = any>(req: Request): T | undefin
   }
 };
 
+export const getPluginSettingsFromHeaders = <T = any>(headers: HeadersInit): T | undefined => {
+  const header = new Headers(headers as any);
+
+  const settings = header.get(LOBE_PLUGIN_SETTINGS);
+  if (!settings) return;
+
+  try {
+    return JSON.parse(settings);
+  } catch {
+    return settings as any;
+  }
+};
+
 export const createHeadersWithPluginSettings = (
   settings: any,
   header?: HeadersInit,
