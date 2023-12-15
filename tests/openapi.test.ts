@@ -1,4 +1,4 @@
-import { OpenAPIConvertor } from '@lobehub/chat-plugin-sdk';
+import { OpenAPIConvertor } from '@lobehub/chat-plugin-sdk/openapi';
 import { describe, expect, it } from 'vitest';
 
 import OpenAPI_Auth_API_Key from './fixtures/OpenAPI_Auth_API_Key.json';

@@ -16,7 +16,8 @@
     "paths": {
       "@/*": [".src/*"],
       "@lobehub/chat-plugin-sdk": ["./src"],
-      "@lobehub/chat-plugin-sdk/client": ["./src/client"]
+      "@lobehub/chat-plugin-sdk/client": ["./src/client"],
+      "@lobehub/chat-plugin-sdk/openapi": ["./src/openapi"]
     },
     "types": ["vitest/globals"]
   },
