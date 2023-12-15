@@ -26,40 +26,7 @@ describe('OpenAPIConvertor', () => {
       const convertor = new OpenAPIConvertor(OpenAPI_V3_0_2);
       const plugins = await convertor.convertOpenAPIToPluginSchema();
 
-      expect(plugins).toEqual([
-        {
-          description: 'Download Pdf',
-          name: 'download_pdf_api_download_pdf_post',
-          parameters: {
-            properties: {
-              url: {
-                title: 'Url',
-                type: 'string',
-              },
-            },
-            required: ['url'],
-            type: 'object',
-          },
-        },
-        {
-          description: 'Perform Query',
-          name: 'perform_query_query_post',
-          parameters: {
-            properties: {
-              doc_id: {
-                title: 'Doc Id',
-                type: 'string',
-              },
-              query: {
-                title: 'Query',
-                type: 'string',
-              },
-            },
-            required: ['doc_id', 'query'],
-            type: 'object',
-          },
-        },
-      ]);
+      expect(plugins).toMatchSnapshot();
     });
   });
 

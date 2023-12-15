@@ -5,6 +5,8 @@ import { OpenAPI, OpenAPIV3_1 } from 'openapi-types';
 import { pluginApiSchema } from '../schema/manifest';
 import { LobeChatPluginApi, PluginSchema } from '../types';
 
+export const OPENAPI_REQUEST_BODY_KEY = '_requestBody';
+
 export class OpenAPIConvertor {
   private readonly openapi: object;
   constructor(openapi: object) {
@@ -26,10 +28,13 @@ export class OpenAPIConvertor {
           const parametersSchema = convertParametersToJSONSchema(operation.parameters || []);
           const requestBodySchema = this.convertRequestBodyToSchema(operation.requestBody);
 
-          const parameters = this.mergeSchemas(
-            ...Object.values(parametersSchema),
-            requestBodySchema,
-          );
+          const parameters = this.mergeSchemas(...Object.values(parametersSchema));
+
+          if (requestBodySchema && Object.keys(requestBodySchema.properties).length > 0) {
+            console.log(requestBodySchema);
+            parameters.properties[OPENAPI_REQUEST_BODY_KEY] = requestBodySchema;
+            parameters.required?.push('_requestBody');
+          }
 
           // 保留原始逻辑作为备选
           const name = operation.operationId || `${method.toUpperCase()} ${path}`;
@@ -150,7 +155,9 @@ export class OpenAPIConvertor {
     return settingsSchema;
   };
 
-  private convertRequestBodyToSchema(requestBody: OpenAPIV3_1.RequestBodyObject) {
+  private convertRequestBodyToSchema(
+    requestBody: OpenAPIV3_1.RequestBodyObject,
+  ): PluginSchema | null {
     if (!requestBody || !requestBody.content) {
       return null;
     }
@@ -186,7 +193,7 @@ export class OpenAPIConvertor {
       }
     }
 
-    return requestBodySchema;
+    return requestBodySchema as PluginSchema;
   }
 
   private mergeSchemas(...schemas: any[]) {

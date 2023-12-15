@@ -16,14 +16,12 @@
     "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@@/*": ["example/.dumi/tmp/*"],
       "@/*": ["src/*"],
-      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
       "@lobehub/chat-plugin-sdk": ["src"],
       "@lobehub/chat-plugin-sdk/*": ["src/*", "*"]
     },
     "types": ["vitest/globals"]
   },
   "exclude": ["client.ts", "tests"],
-  "include": ["src", "typings", "example/.dumirc.ts", "*.ts"]
+  "include": ["src", "typings", "*.ts"]
 }
