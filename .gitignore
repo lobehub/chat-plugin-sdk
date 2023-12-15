@@ -46,5 +46,7 @@ test-output
 
 client.d.ts
 client.js
+openapi.d.ts
+openapi.js
 bun.lockb
 schema.json
