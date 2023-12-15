@@ -13,6 +13,7 @@ export interface PluginSchema extends Omit<JSONSchema7, 'type'> {
   properties: {
     [key: string]: JSONSchema7;
   };
+  required?: string[];
   type: 'object';
 }
 

@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 const JSONSchema = z.object({
   properties: z.object({}),
+  required: z.array(z.string()).optional(),
   type: z.enum(['object']),
 });
 export const pluginApiSchema = z.object({
