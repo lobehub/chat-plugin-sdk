@@ -31,7 +31,6 @@ export class OpenAPIConvertor {
           const parameters = this.mergeSchemas(...Object.values(parametersSchema));
 
           if (requestBodySchema && Object.keys(requestBodySchema.properties).length > 0) {
-            console.log(requestBodySchema);
             parameters.properties[OPENAPI_REQUEST_BODY_KEY] = requestBodySchema;
             parameters.required?.push('_requestBody');
           }
@@ -168,7 +167,7 @@ export class OpenAPIConvertor {
     for (const [contentType, mediaType] of Object.entries(requestBody.content)) {
       if (mediaType.schema) {
         // 直接使用已解析的 Schema
-        const resolvedSchema = mediaType.schema;
+        const resolvedSchema = this.removeRequiredFields(mediaType.schema);
 
         // 根据不同的 content-type，可以在这里添加特定的处理逻辑
         switch (contentType) {
@@ -194,6 +193,30 @@ export class OpenAPIConvertor {
     }
 
     return requestBodySchema as PluginSchema;
+  }
+
+  private removeRequiredFields(schema: any): any {
+    if (schema && typeof schema === 'object') {
+      // 如果是对象类型，遍历它的每个属性
+      for (const key in schema) {
+        // eslint-disable-next-line no-prototype-builtins
+        if (schema.hasOwnProperty(key)) {
+          const value = schema[key];
+
+          // 如果属性是 required 并且值为 true，则删除该属性
+          if (key === 'required' && value === true) {
+            delete schema[key];
+          } else {
+            // 否则，如果属性是对象或数组，则递归处理
+            schema[key] = this.removeRequiredFields(value);
+          }
+        }
+      }
+    } else if (Array.isArray(schema)) {
+      // 如果是数组类型，遍历每个元素
+      return schema.map(this.removeRequiredFields.bind(this));
+    }
+    return schema;
   }
 
   private mergeSchemas(...schemas: any[]) {

@@ -1,6 +1,7 @@
 import { OpenAPIConvertor } from '@lobehub/chat-plugin-sdk/openapi';
 import { describe, expect, it } from 'vitest';
 
+import ChatWithPDF from './fixtures/ChatWithPDF.json';
 import OpenAPI_Auth_API_Key from './fixtures/OpenAPI_Auth_API_Key.json';
 import OpenAPIV2 from './fixtures/OpenAPI_V2.json';
 import openAPIV3 from './fixtures/OpenAPI_V3.json';
@@ -24,6 +25,13 @@ describe('OpenAPIConvertor', () => {
 
     it('can convert OpenAPI v3.0.2 openAPI', async () => {
       const convertor = new OpenAPIConvertor(OpenAPI_V3_0_2);
+      const plugins = await convertor.convertOpenAPIToPluginSchema();
+
+      expect(plugins).toMatchSnapshot();
+    });
+
+    it('ChatWithPDF', async () => {
+      const convertor = new OpenAPIConvertor(ChatWithPDF);
       const plugins = await convertor.convertOpenAPIToPluginSchema();
 
       expect(plugins).toMatchSnapshot();
