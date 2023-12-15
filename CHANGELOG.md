@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.30.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.29.1...v1.30.0)
+
+<sup>Released on **2023-12-15**</sup>
+
+#### ✨ Features
+
+- **misc**: Support openapi convertor.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support openapi convertor ([9a8cfcc](https://github.com/lobehub/chat-plugin-sdk/commit/9a8cfcc))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.29.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.29.0...v1.29.1)
 
 <sup>Released on **2023-12-15**</sup>
