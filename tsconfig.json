@@ -4,6 +4,8 @@
     "skipDefaultLibCheck": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "target": "ESNext",
+    "lib": ["ESNext", "dom"],
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -17,8 +19,8 @@
       "@@/*": ["example/.dumi/tmp/*"],
       "@/*": ["src/*"],
       "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
-      "chat-plugin-sdk": ["src"],
-      "chat-plugin-sdk/*": ["src/*", "*"]
+      "@lobehub/chat-plugin-sdk": ["src"],
+      "@lobehub/chat-plugin-sdk/*": ["src/*", "*"]
     },
     "types": ["vitest/globals"]
   },

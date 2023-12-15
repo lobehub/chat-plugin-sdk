@@ -29,7 +29,7 @@ coverage
 .eslintcache
 .stylelintcache
 test-output
-__snapshots__
+tests/__snapshots__
 *.snap
 
 # production

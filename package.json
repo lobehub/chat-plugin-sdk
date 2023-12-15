@@ -75,8 +75,12 @@
     ]
   },
   "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
     "@babel/runtime": "^7.23.2",
     "@types/json-schema": "^7.0.14",
+    "openapi-jsonschema-parameters": "^12.1.3",
+    "openapi-types": "^12.1.3",
+    "swagger-client": "^3.24.6",
     "zod": "^3.22.4"
   },
   "devDependencies": {
