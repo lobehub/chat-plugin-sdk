@@ -2,6 +2,34 @@
 
 # Changelog
 
+### [Version 1.30.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.0...v1.30.1)
+
+<sup>Released on **2023-12-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix openapi export entry, fix openapi export entry, fix openapi export entry, fix openapi request body problem.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix openapi export entry ([1bd9d28](https://github.com/lobehub/chat-plugin-sdk/commit/1bd9d28))
+- **misc**: Fix openapi export entry ([b383cfc](https://github.com/lobehub/chat-plugin-sdk/commit/b383cfc))
+- **misc**: Fix openapi export entry ([9b9c1f6](https://github.com/lobehub/chat-plugin-sdk/commit/9b9c1f6))
+- **misc**: Fix openapi request body problem ([4aa19ef](https://github.com/lobehub/chat-plugin-sdk/commit/4aa19ef))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.30.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.29.1...v1.30.0)
 
 <sup>Released on **2023-12-15**</sup>
