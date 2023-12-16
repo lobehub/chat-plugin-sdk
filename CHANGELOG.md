@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.30.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.2...v1.30.3)
+
+<sup>Released on **2023-12-16**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix plugin meta schema.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix plugin meta schema ([5d0821d](https://github.com/lobehub/chat-plugin-sdk/commit/5d0821d))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.30.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.1...v1.30.2)
 
 <sup>Released on **2023-12-15**</sup>
