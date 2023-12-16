@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.30.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.3...v1.30.4)
+
+<sup>Released on **2023-12-16**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Improve model systemRole.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Improve model systemRole ([67023ce](https://github.com/lobehub/chat-plugin-sdk/commit/67023ce))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.30.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.2...v1.30.3)
 
 <sup>Released on **2023-12-16**</sup>
