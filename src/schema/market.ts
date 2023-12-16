@@ -4,7 +4,7 @@ import { pluginManifestSchema } from './manifest';
 
 export const pluginMetaSchema = z.object({
   author: z.string(),
-  createAt: z.string(),
+  createdAt: z.string(),
   homepage: z.string(),
   identifier: z.string(),
   manifest: z.string(),
