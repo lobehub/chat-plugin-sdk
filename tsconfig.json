@@ -22,6 +22,6 @@
     },
     "types": ["vitest/globals"]
   },
-  "exclude": ["client.ts", "tests"],
+  "exclude": ["client.ts", "tests", "openapi.ts"],
   "include": ["src", "typings", "*.ts"]
 }
