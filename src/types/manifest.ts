@@ -71,6 +71,7 @@ export interface LobeChatPluginManifest {
   meta: Meta;
   openapi?: string;
   settings?: PluginSchema;
+  systemRole?: string;
   /**
    * plugin runtime type
    * @default default
