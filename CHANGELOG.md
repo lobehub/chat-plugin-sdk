@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.31.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.4...v1.31.0)
+
+<sup>Released on **2023-12-29**</sup>
+
+#### ✨ Features
+
+- **misc**: Support markdown type plugin.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support markdown type plugin ([ac370aa](https://github.com/lobehub/chat-plugin-sdk/commit/ac370aa))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.30.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.3...v1.30.4)
 
 <sup>Released on **2023-12-16**</sup>
