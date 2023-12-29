@@ -1,14 +1,59 @@
 ---
-title: 定义插件描述清单
-group: 插件开发
+title: 插件 Manifest
+group:
+  title: 基本概念
+  order: 1
 order: 1
 ---
 
-# manifest 定义
+# 插件 Manifest
 
-manifest 聚合了插件功能如何实现的信息。核心的字段为 `api` 与 `ui`，分别描述了插件的服务端接口能力与前端渲染的界面地址。
+LobeChat 插件 Manifest 是一个关键的配置文件，它用于描述和定义一个 LobeChat 插件的基本信息和行为。Manifest 文件作为插件的 “身份证”，为 LobeChat 平台提供了如何处理和集成该插件的必要信息。
 
-以我们提供的模板中的 [manifest](https://github.com/lobehub/chat-plugin-template/blob/main/public/manifest-dev.json) 为例：
+## 简介
+
+Manifest 文件通常是以 JSON 格式提供的，以确保 LobeChat 平台能够正确解析和使用插件：
+
+- **标识插件**: Manifest 包含了插件的唯一标识符 ( `identifier` )，这个标识符用于在 LobeChat 平台中区分不同的插件。
+- **配置元数据**: 插件的元数据 ( `meta` )，如标题、描述、标签和头像，用于在 LobeChat 的用户界面中展示插件的信息，帮助用户理解插件的用途。
+- **设定插件描述**: 通过指定系统设定 ( `systemRole` )，我们可以设定插件的描述信息，以便模型能够更好地理解插件的功能和用途。
+- **定义接口**: 通过在 Manifest 中声明 API 接口 ( `api` )，插件可以清晰地告诉 LobeChat 平台它能够提供哪些功能和服务。
+- **指定 UI 展示**: 插件的 UI 配置 ( `ui` ) 决定了插件如何在 LobeChat 中显示，包括其模式、尺寸和加载的 URL。
+
+## Manifest Schema
+
+LobeChat 的插件系统允许开发者使用 Manifest 文件定义插件的配置和行为。 下面是 Manifest 文件的详细结构说明。
+
+manifest 是一个 JSON 文件，其中包含以下字段：
+
+```typescript
+{
+  "api": Array<PluginApi>,       // 插件 API 的定义数组
+  "author": String,              // 插件作者，可选
+  "createAt": String,            // 插件创建日期，可选
+  "gateway": String,             // 插件网关地址，可选
+  "homepage": String,            // 插件主页 URL，可选
+  "identifier": String,          // 插件唯一标识符
+  "meta": {                      // 插件元数据
+    "avatar": String,            // 插件头像 URL，可选
+    "description": String,       // 插件描述，可选
+    "tags": Array<String>,       // 插件标签数组，可选
+    "title": String              // 描述插件的标题，可选
+  },
+  "openapi": String,             // 插件 OpenAPI 规范 URL，可选
+  "settings": JSONSchema,        // 插件设置的 JSON Schema，可选
+  "systemRole": String,          // 插件系统角色，可选
+  "type": Enum['default', 'markdown', 'standalone'], // 插件类型，可选
+  "ui": {                        // 插件 UI 配置，可选
+    "height": Number,            // UI 高度，可选
+    "mode": Enum['iframe', 'module'], // UI 模式，可选
+    "url": String,               // UI 地址
+    "width": Number              // UI 宽度，可选
+  }
+}
+```
+
+一个示例如下：
 
 ```json
 {
@@ -38,113 +83,6 @@ manifest 聚合了插件功能如何实现的信息。核心的字段为 `api` �
   ],
   "gateway": "http://localhost:3400/api/gateway",
   "identifier": "chat-plugin-template",
-  "ui": {
-    "url": "http://localhost:3400",
-    "height": 200
-  },
-  "version": "1"
-}
-```
-
-在这份 manifest 中，主要包含了以下几个部分：
-
-## `identifier`
-
-这是插件的唯一标识符，用来区分不同的插件，这个字段需要全局唯一。
-
-## `api`
-
-这是一个数组，包含了插件所提供的所有 API 接口信息。每个接口都包含了 url、name、description 和 parameters 字段，均为必填项。
-
-其中 `description` 和 `parameters` 两个字段，将会作为 [Function Call](https://sspai.com/post/81986) 的 `functions` 参数发送给 gpt，示例如下：
-
-```json
-{
-  "functions": [
-    {
-      "name": "realtimeWeather",
-      "description": "获取当前天气情况",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "city": {
-            "description": "城市名称",
-            "type": "string"
-          }
-        },
-        "required": ["city"]
-      }
-    }
-  ],
-  "messages": [
-    {
-      "role": "user",
-      "content": "我明天应该穿什么？"
-    },
-    {
-      "role": "assistant",
-      "content": "请告诉你所在的城市？"
-    },
-    {
-      "role": "user",
-      "content": "杭州"
-    }
-  ]
-}
-```
-
-其中，parameters 需要符合 [JSON Schema](https://json-schema.org/) 规范，可以使用下述方式进行校验：
-
-```ts
-import { z } from 'zod';
-
-const JSONSchema = z.object({
-  properties: z.object({}),
-  type: z.enum(['object']),
-});
-```
-
-在我们提供的模板示例中，api 对应的接口名为 `recommendClothes` ，这个接口的功能是根据用户的心情和性别来推荐衣服。接口的参数包括用户的心情和性别，这两个参数都是必填项。
-
-## `ui`
-
-这个字段包含了插件的用户界面信息，指明了 LobeChat 从哪个地址加载插件的前端界面。由于 LobeChat 插件界面加载是基于 iframe 实现的，因此可以按需指定插件界面的高度、宽度。
-
-## `gateway`
-
-这个字段指定了 LobeChat 查询 api 接口的网关。LobeChat 默认的插件网关是云端服务，而自定义插件的请求需要发送给本地服务的，因此通过在 manifest 中指定网关，LobeChat 将会直接请求这个地址，进而访问到本地的插件服务，发布到线上的插件可以不用指定该字段。
-
-## API 与 Schema
-
-关于 manifest 各个字段的完整介绍，参见：[manifest](/api/plugin-manifest)。
-
-## JSON 类型提示
-
-SDK 提供了 manifest 的 JSON Schema 定义，它可以用于在编写 `manifest.json` 文件时为 IDE 提供类型信息和智能提示。
-
-使用时你只需为 JSON 配置文件声明 `$schema` 字段来指向 schema 定义文件即可，以 [lobehub/chat-plugin-template](https://github.com/lobehub/chat-plugin-template/blob/main/public/manifest-dev.json) 为例，它的项目结构为：
-
-```plaintext
-lobehub/chat-plugin-template
-├── CHANGELOG.md
-├── node_modules
-├── README.md
-├── src
-├── public
-│   ├── foo.json
-│   ├── manifest-dev.json
-│   └── manifest-standalone.json
-└── package.json
-```
-
-那么 `manifest-dev.json` 的 `$schema` 字段可以配置为这样的相对路径：
-
-```json filename=manifest-dev.json
-{
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
-  "api": [],
-  "gateway": "http://localhost:3400/api/gateway",
-  "identifier": "plugin-identifier",
   "ui": {
     "url": "http://localhost:3400",
     "height": 200

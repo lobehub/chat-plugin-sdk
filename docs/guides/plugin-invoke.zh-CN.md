@@ -1,6 +1,8 @@
 ---
-title: LobeChat 插件触发机制
+title: 插件触发机制
 description: 如何通过 Function Call 触发 LobeChat 插件
+group: 基本概念
+order: 3
 ---
 
 # LobeChat 插件触发流程
