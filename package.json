@@ -94,7 +94,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@vitest/coverage-v8": "0.34.6",
+    "@vitest/coverage-v8": "^1",
     "babel-plugin-antd-style": "^1.0.4",
     "clean-pkg-json": "^1",
     "commitlint": "^18",
@@ -115,7 +115,7 @@
     "stylelint": "^15",
     "ts-json-schema-generator": "^1.4.0",
     "typescript": "^5",
-    "vitest": "0.34.6"
+    "vitest": "^1"
   },
   "peerDependencies": {
     "react": ">=18",
