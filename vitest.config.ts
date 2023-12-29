@@ -10,6 +10,7 @@ export default defineConfig({
       '@lobehub/chat-plugin-sdk/openapi': path.join(__dirname, './src/openapi'),
     },
     coverage: {
+      include: ['src'],
       reporter: ['text', 'text-summary', 'json', 'lcov'],
     },
     environment: 'jsdom',
