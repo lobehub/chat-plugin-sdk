@@ -4,4 +4,4 @@ group: 基本概念
 order: 3
 ---
 
-# OpenAPI
+# 插件通信机制
