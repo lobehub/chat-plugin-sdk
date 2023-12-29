@@ -2,6 +2,9 @@
 title: 插件 Manifest
 group:
   title: 基本概念
+  order: 0
+nav:
+  title: 完全指南
   order: 1
 order: 1
 ---

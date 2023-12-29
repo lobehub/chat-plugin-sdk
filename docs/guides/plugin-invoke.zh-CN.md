@@ -5,9 +5,9 @@ group: 基本概念
 order: 3
 ---
 
-# LobeChat 插件触发流程
+# LobeChat 插件触发机制
 
-LobeChat 插件系统通过 [Function Call 机制](https://sspai.com/post/81986)来触发插件，使得聊天机器人能够与外部 API 进行互动，以增强用户体验。以下是插件触发流程的详细说明。
+LobeChat 插件系统通过 [Function Call 机制](https://sspai.com/post/81986) 来触发插件，使得聊天机器人能够与外部 API 进行互动，以增强用户体验。以下是插件触发流程的详细说明。
 
 ## Function Call 基本原理
 

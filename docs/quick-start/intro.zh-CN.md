@@ -4,7 +4,7 @@ group:
   title: 快速上手
   order: 0
 nav:
-  title: 指南
+  title: 快速上手
   order: 1
 ---
 
