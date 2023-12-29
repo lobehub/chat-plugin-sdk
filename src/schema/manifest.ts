@@ -28,6 +28,7 @@ export const pluginManifestSchema = z.object({
   openapi: z.string().optional(),
   settings: JSONSchema.optional(),
   systemRole: z.string().optional(),
+  type: z.enum(['default', 'markdown', 'standalone']).optional(),
   ui: z
     .object({
       height: z.number().optional(),

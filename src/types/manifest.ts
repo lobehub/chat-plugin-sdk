@@ -2,7 +2,8 @@ import { JSONSchema7 } from 'json-schema';
 
 import { Meta } from './market';
 
-export type LobePluginType = 'default' | 'standalone';
+export type LobePluginType = 'default' | 'standalone' | 'markdown';
+
 /**
  * Plugin Schema
  * @desc the schema of plugin, de´scribe the api input of the function
@@ -71,6 +72,12 @@ export interface LobeChatPluginManifest {
   meta: Meta;
   openapi?: string;
   settings?: PluginSchema;
+  /**
+   * the plugin system role
+   * @desc The system role of the plugin
+   * @nameCN 系统角色
+   * @descCN 插件的系统角色，将会注入到会话消息中
+   */
   systemRole?: string;
   /**
    * plugin runtime type
