@@ -1,6 +1,5 @@
 export * from './const';
-export * from './fetch';
+export * from './deprecatedOnV2';
 export * from './hooks';
 export * from './lobeChat';
-export * from './postMessage';
 export * from './type';

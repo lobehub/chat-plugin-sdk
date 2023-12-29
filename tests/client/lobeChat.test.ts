@@ -1,24 +1,25 @@
 import { PluginChannel, lobeChat } from '@lobehub/chat-plugin-sdk/client';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+// Mock window and postMessage before each test
+beforeEach(() => {
+  global.window = {
+    addEventListener: vi.fn(),
+    postMessage: vi.fn(),
+    removeEventListener: vi.fn(),
+  } as any;
+
+  global.top = {
+    postMessage: vi.fn(),
+  } as any;
+});
+
+// Clean up mocks after each test
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
 describe('lobeChat', () => {
-  // Mock window and postMessage before each test
-  beforeEach(() => {
-    global.window = {
-      addEventListener: vi.fn(),
-      postMessage: vi.fn(),
-      removeEventListener: vi.fn(),
-    } as any;
-
-    global.top = {
-      postMessage: vi.fn(),
-    } as any;
-  });
-
-  // Clean up mocks after each test
-  afterEach(() => {
-    vi.restoreAllMocks();
-  });
   describe('getPluginMessage', () => {
     it('should resolve undefined when window is undefined', async () => {
       const originalWindow = global.window;
@@ -344,7 +345,33 @@ describe('lobeChat', () => {
       lobeChat.setPluginSettings(settings);
 
       expect(global.top?.postMessage).toHaveBeenCalledWith(
-        { type: PluginChannel.updatePluginState, value: settings },
+        { type: PluginChannel.updatePluginSettings, value: settings },
+        '*',
+      );
+    });
+  });
+
+  describe('triggerAIMessage', () => {
+    it('should post message to parent with id to trigger AI message', () => {
+      const id = 'unique-id-123';
+
+      lobeChat.triggerAIMessage(id);
+
+      expect(global.top?.postMessage).toHaveBeenCalledWith(
+        { id, type: PluginChannel.triggerAIMessage },
+        '*',
+      );
+    });
+  });
+
+  describe('createAssistantMessage', () => {
+    it('should post message to parent with content to create assistant message', () => {
+      const content = 'This is an AI-generated message';
+
+      lobeChat.createAssistantMessage(content);
+
+      expect(global.top?.postMessage).toHaveBeenCalledWith(
+        { content, type: PluginChannel.createAssistantMessage },
         '*',
       );
     });

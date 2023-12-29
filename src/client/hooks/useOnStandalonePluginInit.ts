@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
-import { PluginPayload, fetchPluginPayload } from '../fetch/pluginPayload';
+import { PluginPayload, lobeChat } from '@/client';
 
 export const useOnStandalonePluginInit = <T = any>(
   callback: (payload: PluginPayload<T>) => void,
 ) => {
   useEffect(() => {
-    fetchPluginPayload().then((e) => {
+    lobeChat.getPluginPayload().then((e) => {
       if (!e) return;
 
       callback(e);

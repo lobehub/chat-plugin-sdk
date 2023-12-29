@@ -1,13 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { fetchPluginSettings } from '@/client/fetch';
-import { postToUpdatePluginSettings } from '@/client/postMessage';
+import { lobeChat } from '@/client';
 
 export const usePluginSettings = <T>(initialValue: T) => {
   const [value, setValue] = useState(initialValue);
 
   useEffect(() => {
-    fetchPluginSettings().then((e) => {
+    lobeChat.getPluginSettings().then((e) => {
       if (!e) return;
 
       setValue(e);
@@ -16,7 +15,7 @@ export const usePluginSettings = <T>(initialValue: T) => {
 
   const updateValue = useCallback((value: T) => {
     setValue(value);
-    postToUpdatePluginSettings(value);
+    lobeChat.setPluginSettings(value);
   }, []);
 
   return [value, updateValue] as const;
