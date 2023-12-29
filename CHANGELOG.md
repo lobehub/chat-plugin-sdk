@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.32.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.31.0...v1.32.0)
+
+<sup>Released on **2023-12-29**</sup>
+
+#### ✨ Features
+
+- **misc**: Support triggerAIMessage and createAssistantMessage.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support triggerAIMessage and createAssistantMessage ([54a14b4](https://github.com/lobehub/chat-plugin-sdk/commit/54a14b4))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.31.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.30.4...v1.31.0)
 
 <sup>Released on **2023-12-29**</sup>
