@@ -65,11 +65,8 @@ Host: plugin.example.com
 Content-Type: application/json
 
 {
-  "function": "queryWeatherForecast",
-  "arguments": {
-    "city": "用户所在城市",
-    "date": "明天的日期"
-  }
+  "city": "用户所在城市",
+  "date": "明天的日期"
 }
 ```
 

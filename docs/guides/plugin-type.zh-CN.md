@@ -1,5 +1,5 @@
 ---
-title: 插件类型
+title: LobeChat 插件类型
 group: 基本概念
 order: 2
 ---
