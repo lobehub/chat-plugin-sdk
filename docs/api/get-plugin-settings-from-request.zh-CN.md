@@ -4,7 +4,8 @@ description: 从请求中获取插件设置
 group:
   title: 服务端
   order: 1
-nav: API
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk'
 ---
 
 用于从请求中获取插件设置字符串。

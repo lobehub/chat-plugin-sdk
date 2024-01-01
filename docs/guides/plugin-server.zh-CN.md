@@ -1,64 +1,43 @@
 ---
-title: 服务端开发
-group: 插件开发
-order: 1
+title: 服务端实现概述
+group:
+  title: 插件服务端
+  order: 3
 ---
 
-# 插件的服务端开发
+# LobeChat 插件服务端概述
 
-服务端只需要实现 manifest 中描述的 api 接口即可。在模板中，我们使用了 vercel 的 [Edge Runtime](https://nextjs.org/docs/pages/api-reference/edge) 作为服务，免去运维成本。
+LobeChat 插件服务端是插件生态中的重要部分，它承载了与 LobeChat 主体进行交互的核心逻辑。服务端的主要职责包括处理请求、执行业务逻辑、鉴权验证以及与插件网关的通信。下面是对插件服务端应包含内容的高层次说明。
 
-## api 实现
+## 关键组件与功能
 
-针对 Edge Runtime ，我们在 `@lobehub/chat-plugin-sdk` 提供了 `createErrorResponse` 方法，用于快速返回错误响应。目前提供的错误类型详见：[PluginErrorType](/api/error)。
+### 请求处理与业务逻辑
 
-模板中的 clothes 接口实现如下：
+- **请求接收**：能够接收来自 LobeChat 或插件网关的 HTTP 请求。
+- **逻辑执行**：执行具体的业务逻辑，如数据处理、外部服务调用等。
+- **响应返回**：根据业务逻辑的执行结果，返回结构化的响应数据。
 
-```ts
-export default async (req: Request) => {
-  if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);
+### 插件网关交互
 
-  const { gender, mood } = (await req.json()) as RequestData;
+- **网关通信**：与插件网关进行有效的通信，确保请求的正确路由和响应的及时回传。
+- **本地与远程兼容**：支持本地开发环境和远程部署环境中的网关配置和交互。
 
-  const clothes = gender === 'man' ? manClothes : womanClothes;
+### 服务端部署与扩展
 
-  const result: ResponseData = {
-    clothes: clothes[mood] || [],
-    mood,
-    today: Date.now(),
-  };
+- **云平台部署**：支持在云平台（如 Vercel）上部署，利用云服务的性能和扩展性。
+- **环境配置**：提供灵活的环境配置选项，以适应不同的部署需求。
 
-  return new Response(JSON.stringify(result));
-};
-```
+### 兼容性与跨语言支持
 
-其中 `maniClothes` 和 `womanClothes` 是写死的 mock 数据，在实际场景中，可以替换为数据库请求。
+- **多语言支持**：服务端不限于特定编程语言，支持 JavaScript、Python 等多种语言的实现。
+- **开发者工具**：提供 SDKs 和工具，以帮助开发者快速搭建和测试插件服务端。
 
-## gateway
+### OpenAPI Schema 集成（可选）
 
-由于 LobeChat 默认的插件网关是云端服务（<https://chat.lobehub.com/api/plugins>），云端服务通过 manifest 上的 api 地址发送请求，以解决跨域问题。
+- **接口定义**：使用 OpenAPI Schema 精确定义插件的 API 接口，包括路径、方法、参数和响应格式。
+- **文档化**：提供清晰的 API 文档，使得 LobeChat 可以自动识别并与插件服务端无缝集成。
 
-而针对自定义插件，插件的请求需要发送给本地服务的， 因此通过在 manifest 中指定网关 (<http://localhost:3400/api/gateway>)，LobeChat 将会直接请求该地址，然后只需要在该地址下创建一个网关实现即可。
+### 鉴权与安全（可选）
 
-```ts
-import { createLobeChatPluginGateway } from '@lobehub/chat-plugins-gateway';
-
-export const config = {
-  runtime: 'edge',
-};
-
-export default async createLobeChatPluginGateway();
-```
-
-[`@lobehub/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) 包含了 LobeChat 中插件网关的[实现](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts)，你可以直接使用该包创建网关，进而让 LobeChat 访问到本地的插件服务。
-
-## 其他服务端实现示例
-
-由于插件的服务端侧支持任意框架、任意语言的实现，在这里提供一些实现示例以供参考：
-
-- Vercel Node.Js 运行时服务端实现：[chat-plugin-web-crawler](https://github.com/lobehub/chat-plugin-web-crawler/blob/main/api/v1/index.ts)
-- 欢迎贡献
-
-## 支持 OpenAPI Manifest
-
-除了使用 api 字段定义插件的服务端以外，我们还计划支持 OpenAPI 规范来描述插件的功能，这样可以更方便的使用已有的 OpenAPI 工具来形成插件服务。该能力将在[lobehub/chat-plugin-sdk#13](https://github.com/lobehub/chat-plugin-sdk/issues/13) 中跟进。
+- **认证机制**：实现安全的认证机制，确保只有授权的请求可以访问服务端资源。
+- **密钥管理**：提供密钥或令牌管理，允许用户通过安全的方式传递和验证鉴权信息。

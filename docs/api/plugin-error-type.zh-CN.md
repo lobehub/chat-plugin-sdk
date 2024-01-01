@@ -1,10 +1,12 @@
 ---
-title: 服务端错误类型
+title: PluginErrorType 服务端错误类型
 atomId: PluginErrorType
-description: 插件错误类型
+description: 服务端错误类型
 group: 服务端
 nav: API
 order: 100
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk'
 ---
 
 LobeChat 在插件服务请求中所有的错误类型，包括业务语义错误、客户端错误和服务端错误。

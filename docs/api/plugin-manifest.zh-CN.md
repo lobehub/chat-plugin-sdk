@@ -3,7 +3,8 @@ title: 插件描述清单 Schema
 group: Schema
 atomId: pluginManifestSchema
 description: 插件描述文件的 Schema
-nav: API
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk'
 ---
 
 ## pluginManifestSchema

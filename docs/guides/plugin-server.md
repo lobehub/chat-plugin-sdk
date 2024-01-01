@@ -1,64 +1,43 @@
 ---
-title: Server Development
-group: Plugin Development
-order: 1
+title: Server Overview
+group:
+  title: Plugin Server
+  order: 3
 ---
 
-# Server-side Development for Plugins
+# Overview of LobeChat Plugin Server
 
-The server only needs to implement the API interfaces described in the manifest. In the template, we use vercel's [Edge Runtime](https://nextjs.org/docs/pages/api-reference/edge) as the service, eliminating the need for maintenance costs.
+The LobeChat plugin server is an essential part of the plugin ecosystem, carrying the core logic for interacting with the LobeChat main body. The main responsibilities of the server include handling requests, executing business logic, authentication verification, and communicating with the plugin gateway. Below is a high-level overview of what the plugin server should include.
 
-## API Implementation
+## Key Components and Functions
 
-For the Edge Runtime, we provide the `createErrorResponse` method in `@lobehub/chat-plugin-sdk` to quickly return error responses. Currently, the provided error types can be found in [PluginErrorType](/api/error).
+### Request Handling and Business Logic
 
-The implementation of the "clothes" interface in the template is as follows:
+- **Request Reception**: Capable of receiving HTTP requests from LobeChat or the plugin gateway.
+- **Logic Execution**: Executes specific business logic, such as data processing and external service calls.
+- **Response Return**: Returns structured response data based on the execution result of the business logic.
 
-```ts
-export default async (req: Request) => {
-  if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);
+### Plugin Gateway Interaction
 
-  const { gender, mood } = (await req.json()) as RequestData;
+- **Gateway Communication**: Effectively communicates with the plugin gateway to ensure correct request routing and timely response transmission.
+- **Local and Remote Compatibility**: Supports gateway configuration and interaction in both local development and remote deployment environments.
 
-  const clothes = gender === 'man' ? manClothes : womanClothes;
+### Server Deployment and Scalability
 
-  const result: ResponseData = {
-    clothes: clothes[mood] || [],
-    mood,
-    today: Date.now(),
-  };
+- **Cloud Platform Deployment**: Supports deployment on cloud platforms (such as Vercel) to leverage the performance and scalability of cloud services.
+- **Environment Configuration**: Provides flexible environment configuration options to adapt to different deployment needs.
 
-  return new Response(JSON.stringify(result));
-};
-```
+### Compatibility and Cross-Language Support
 
-Where `manClothes` and `womanClothes` are hard-coded mock data and can be replaced with database requests in actual scenarios.
+- **Multi-Language Support**: The server is not limited to a specific programming language and supports implementations in various languages such as JavaScript, Python, and others.
+- **Developer Tools**: Provides SDKs and tools to help developers quickly build and test plugin servers.
 
-## Gateway
+### OpenAPI Schema Integration (Optional)
 
-Since LobeChat's default plugin gateway is a cloud service (<https://chat.lobehub.com/api/plugins>), the cloud service sends requests to the API address specified in the manifest to address cross-origin issues.
+- **Interface Definition**: Precisely defines the plugin's API interface using OpenAPI Schema, including paths, methods, parameters, and response formats.
+- **Documentation**: Provides clear API documentation, enabling LobeChat to automatically recognize and seamlessly integrate with the plugin server.
 
-For custom plugins, the plugin requests need to be sent to the local service. Therefore, by specifying the gateway in the manifest (<http://localhost:3400/api/gateway>), LobeChat will directly request this address, and then only a gateway implementation needs to be created at that address.
+### Authentication and Security (Optional)
 
-```ts
-import { createLobeChatPluginGateway } from '@lobehub/chat-plugins-gateway';
-
-export const config = {
-  runtime: 'edge',
-};
-
-export default async createLobeChatPluginGateway();
-```
-
-The [`@lobehub/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) contains the [implementation](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts) of the plugin gateway in LobeChat. You can directly use this package to create a gateway, allowing LobeChat to access the local plugin service.
-
-## Other Server-Side Implementation Examples
-
-As the server-side support for plugins allows for implementation in any framework or language, here are some implementation examples for reference:
-
-- Vercel Node.js runtime server implementation: [chat-plugin-web-crawler](https://github.com/lobehub/chat-plugin-web-crawler/blob/main/api/v1/index.ts)
-- Contributions are welcome
-
-## Support for OpenAPI Manifest
-
-In addition to using the API field to define the plugin's server, we also plan to support the OpenAPI specification to describe the plugin's functionality. This will make it more convenient to use existing OpenAPI tools to define plugin services. This capability will be tracked in [lobehub/chat-plugin-sdk#13](https://github.com/lobehub/chat-plugin-sdk/issues/13).
+- **Authentication Mechanism**: Implements a secure authentication mechanism to ensure that only authorized requests can access server resources.
+- **Key Management**: Provides key or token management, allowing users to securely pass and verify authentication information.

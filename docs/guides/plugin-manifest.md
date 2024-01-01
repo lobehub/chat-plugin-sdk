@@ -1,14 +1,62 @@
 ---
-title: Definition of Plugin Manifest
-group: Plugin Development
+title: Plugin Manifest
+group:
+  title: Concepts
+  order: 0
+nav:
+  title: Complete Guide
+  order: 2
 order: 1
 ---
 
-# Manifest Definition
+# Plugin Manifest
 
-The manifest aggregates information on how plugin functionality is implemented. The core fields are `api` and `ui`, which respectively describe the server-side API capabilities of the plugin and the frontend rendering interface addresses.
+The LobeChat Plugin Manifest is a crucial configuration file used to describe and define the basic information and behavior of a LobeChat plugin. The Manifest file serves as the "identity card" of the plugin, providing the necessary information for the LobeChat platform to handle and integrate the plugin.
 
-Taking the [manifest](https://github.com/lobehub/chat-plugin-template/blob/main/public/manifest-dev.json) in our provided template as an example:
+## Introduction
+
+The Manifest file is typically provided in JSON format to ensure that the LobeChat platform can correctly parse and use the plugin:
+
+- **Identify the plugin**: The Manifest contains the unique identifier (`identifier`) of the plugin, which is used to distinguish different plugins within the LobeChat platform.
+- **Configure metadata**: The plugin's metadata (`meta`), such as title, description, tags, and avatar, is used to display the plugin's information in the LobeChat user interface, helping users understand the purpose of the plugin.
+- **Set plugin description**: By specifying the system role (`systemRole`), we can set the plugin's description to help the model better understand the functionality and purpose of the plugin.
+- **Define interfaces**: By declaring API interfaces (`api`) in the Manifest, the plugin can clearly inform the LobeChat platform about the functionality and services it can provide.
+- **Specify UI display**: The plugin's UI configuration (`ui`) determines how the plugin is displayed in LobeChat, including its mode, size, and the URL to load.
+
+## Manifest Schema
+
+The LobeChat plugin system allows developers to define the configuration and behavior of plugins using the Manifest file. Below is a detailed description of the structure of the Manifest file.
+
+The manifest is a JSON file containing the following fields:
+
+```typescript
+{
+  "api": Array<PluginApi>,       // Array defining the plugin's API
+  "author": String,              // Plugin author, optional
+  "createAt": String,            // Plugin creation date, optional
+  "gateway": String,             // Plugin gateway address, optional
+  "homepage": String,            // Plugin homepage URL, optional
+  "identifier": String,          // Plugin unique identifier
+  "meta": {                      // Plugin metadata
+    "avatar": String,            // Plugin avatar URL, optional
+    "description": String,       // Plugin description, optional
+    "tags": Array<String>,       // Array of plugin tags, optional
+    "title": String              // Title describing the plugin, optional
+  },
+  "openapi": String,             // Plugin OpenAPI specification URL, optional
+  "settings": JSONSchema,        // JSON Schema for plugin settings, optional
+  "systemRole": String,          // Plugin system role, optional
+  "type": Enum['default', 'markdown', 'standalone'], // Plugin type, optional
+  "ui": {                        // Plugin UI configuration, optional
+    "height": Number,            // UI height, optional
+    "mode": Enum['iframe', 'module'], // UI mode, optional
+    "url": String,               // UI URL
+    "width": Number              // UI width, optional
+  }
+}
+```
+
+An example is as follows:
 
 ```json
 {
@@ -21,14 +69,14 @@ Taking the [manifest](https://github.com/lobehub/chat-plugin-template/blob/main/
       "parameters": {
         "properties": {
           "mood": {
-            "description": "Current mood of the user, optional values are: happy, sad, anger, fear, surprise, disgust",
+            "description": "The user's current mood, optional values are: happy, sad, anger, fear, surprise, disgust",
             "enums": ["happy", "sad", "anger", "fear", "surprise", "disgust"],
             "type": "string"
           },
           "gender": {
             "type": "string",
             "enum": ["man", "woman"],
-            "description": "User's gender, this information needs to be obtained from the user"
+            "description": "User's gender, this information is known only after asking the user"
           }
         },
         "required": ["mood", "gender"],
@@ -38,113 +86,6 @@ Taking the [manifest](https://github.com/lobehub/chat-plugin-template/blob/main/
   ],
   "gateway": "http://localhost:3400/api/gateway",
   "identifier": "chat-plugin-template",
-  "ui": {
-    "url": "http://localhost:3400",
-    "height": 200
-  },
-  "version": "1"
-}
-```
-
-In this manifest, the main sections include the following:
-
-## `identifier`
-
-This is the unique identifier for the plugin, used to differentiate between different plugins. This field needs to be globally unique.
-
-## `api`
-
-This is an array containing all the API interface information provided by the plugin. Each interface includes fields such as url, name, description, and parameters, all of which are required.
-
-The `description` and `parameters` fields of each interface will be sent to the GPT as the `functions` parameter in a [Function Call](https://sspai.com/post/81986), as shown below:
-
-```json
-{
-  "functions": [
-    {
-      "name": "realtimeWeather",
-      "description": "Get the current weather condition",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "city": {
-            "description": "City name",
-            "type": "string"
-          }
-        },
-        "required": ["city"]
-      }
-    }
-  ],
-  "messages": [
-    {
-      "role": "user",
-      "content": "What should I wear tomorrow?"
-    },
-    {
-      "role": "assistant",
-      "content": "Please tell me the city you are in."
-    },
-    {
-      "role": "user",
-      "content": "Hangzhou"
-    }
-  ]
-}
-```
-
-The parameters need to align with the [JSON Schema](https://json-schema.org/) specification and can be validated using the following approach:
-
-```ts
-import { z } from 'zod';
-
-const JSONSchema = z.object({
-  properties: z.object({}),
-  type: z.enum(['object']),
-});
-```
-
-In our provided template example, the API interface corresponds to the `recommendClothes` endpoint, which recommends clothes based on the user's mood and gender. The parameters for this interface include the user's mood and gender, both of which are required.
-
-## `ui`
-
-This field contains information about the plugin's user interface, indicating where LobeChat can load the plugin's frontend interface from. Since the loading of plugin interfaces in LobeChat is based on iframes, the height and width of the plugin interface can be specified as needed.
-
-## `gateway`
-
-This field specifies the gateway for LobeChat to query the plugin's API interface. LobeChat's default plugin gateway is a cloud-based service, and custom plugin requests need to be sent to a local service. By specifying the gateway in the manifest, LobeChat will directly request this address and access the local plugin service. Published online plugins may omit this field.
-
-## API and Schema
-
-For a complete introduction to the various fields of the manifest, refer to: [manifest](/api/plugin-manifest).
-
-## JSON Type Hints
-
-The SDK provides a JSON Schema definition for the manifest, which can be used to provide type information and intelligent hints for IDEs when writing the `manifest.json` file.
-
-When using this, you only need to declare the `$schema` field in the JSON configuration file to point to the schema definition file. For example, in [lobehub/chat-plugin-template](https://github.com/lobehub/chat-plugin-template/blob/main/public/manifest-dev.json), with a project structure like:
-
-```plaintext
-lobehub/chat-plugin-template
-├── CHANGELOG.md
-├── node_modules
-├── README.md
-├── src
-├── public
-│   ├── foo.json
-│   ├── manifest-dev.json
-│   └── manifest-standalone.json
-└── package.json
-```
-
-The `$schema` field of `manifest-dev.json` can be configured with a relative path like this:
-
-```json filename=manifest-dev.json
-{
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
-  "api": [],
-  "gateway": "http://localhost:3400/api/gateway",
-  "identifier": "plugin-identifier",
   "ui": {
     "url": "http://localhost:3400",
     "height": 200

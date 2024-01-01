@@ -6,7 +6,6 @@ group:
   order: 10
 apiHeader:
   pkg: '@lobehub/chat-plugin-sdk/client'
-nav: API
 ---
 
 该实例包含插件侧与 LobeChat 交互的所有关键方法。

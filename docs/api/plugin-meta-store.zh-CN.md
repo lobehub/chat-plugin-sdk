@@ -3,7 +3,8 @@ title: 插件市场元数据 Schema
 group: Schema
 atomId: pluginMetaSchema
 description: 上架到插件市场中的插件元数据的数据模式定义。
-nav: API
+apiHeader:
+  pkg: '@lobehub/chat-plugin-sdk'
 ---
 
 插件元数据的 Schema。

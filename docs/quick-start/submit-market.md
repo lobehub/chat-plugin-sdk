@@ -1,13 +1,13 @@
 ---
-title: Listing Plugins on Marketplace
+title: Listing Plugins on StoreMarketplace
 group:
   title: Plugin Submission
   order: 2
 ---
 
-## Listing Plugins on Marketplace
+## Listing Plugins on Store
 
-If you want your plugin to be used by more people, feel free to [submit it for listing](https://github.com/lobehub/lobe-chat-plugins) on the plugin marketplace.
+If you want your plugin to be used by more people, feel free to [submit it for listing](https://github.com/lobehub/lobe-chat-plugins) on the plugin store.
 
 ## 🚀 How to Submit a Plugin
 

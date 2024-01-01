@@ -1,6 +1,7 @@
 ---
 title: Development Template
 group: Quick Start
+order: 10
 ---
 
 # Development Template

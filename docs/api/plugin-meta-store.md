@@ -1,9 +1,8 @@
 ---
-title: 插件市场元数据 Schema
+title: pluginMetaSchema
 group: Schema
 atomId: pluginMetaSchema
-description: 上架到插件市场中的插件元数据的数据模式定义。
-nav: API
+description: Schema for plugin meta data
 ---
 
 Schema for plugin metadata.
