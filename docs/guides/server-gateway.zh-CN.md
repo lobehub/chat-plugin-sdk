@@ -3,7 +3,7 @@ title: 插件网关
 group:
   title: 插件服务端
   order: 3
-order: 4
+order: 2
 ---
 
 # LobeChat 插件网关

@@ -8,7 +8,7 @@ atomId: PluginChannel
 description: 提供了关于插件通信的消息类型的详细说明
 nav:
   title: API
-  order: 10
+  order: 100
 apiHeader:
   pkg: '@lobehub/chat-plugin-sdk'
 ---

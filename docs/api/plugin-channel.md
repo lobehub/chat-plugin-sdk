@@ -8,7 +8,7 @@ atomId: PluginChannel
 description: Provides detailed explanations of message types for plugin communication
 nav:
   title: API
-  order: 2
+  order: 100
 ---
 
 # PluginChannel Communication Messages

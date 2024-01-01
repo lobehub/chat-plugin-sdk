@@ -4,6 +4,7 @@ group: Quick Start
 nav:
   title: Quick Start
   order: 1
+order: 0
 ---
 
 # Introduction

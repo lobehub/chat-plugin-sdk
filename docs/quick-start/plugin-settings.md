@@ -3,7 +3,7 @@ title: Plugin Settings
 group:
   title: Plugin Development
   order: 1
-order: 3
+order: 4
 ---
 
 # Plugin Settings

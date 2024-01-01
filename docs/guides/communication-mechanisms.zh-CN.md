@@ -1,7 +1,7 @@
 ---
 title: 插件通信
 group: 基本概念
-order: 3
+order: 4
 ---
 
 # 插件通信机制概述
