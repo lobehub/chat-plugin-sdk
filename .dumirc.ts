@@ -12,7 +12,7 @@ const themeConfig = {
       text: 'Github',
     },
     {
-      link: '/guides/intro',
+      link: '/quick-start/intro',
       text: 'Get Started',
       type: 'primary',
     },
