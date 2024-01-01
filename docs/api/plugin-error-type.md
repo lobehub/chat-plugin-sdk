@@ -1,5 +1,5 @@
 ---
-title: Server Error Type
+title: Plugin Error Type
 atomId: PluginErrorType
 description: Plugin error types
 group: Server

@@ -1,8 +1,8 @@
 ---
 title: getPluginSettingsFromRequest
-description: 从请求中获取插件设置
+description: get plugin settings from request
 group:
-  title: 服务端
+  title: Server
   order: 1
 nav: API
 ---

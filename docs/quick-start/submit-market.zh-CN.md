@@ -1,13 +1,13 @@
 ---
-title: 上架插件市场
+title: 上架插件商店
 group:
   title: 插件发布
   order: 20
 ---
 
-## 上架插件市场
+## 上架插件商店
 
-如果你希望插件被更多人使用，欢迎将你的插件 [提交上架](https://github.com/lobehub/lobe-chat-plugins) 到插件市场。
+如果你希望插件被更多人使用，欢迎将你的插件 [提交上架](https://github.com/lobehub/lobe-chat-plugins) 到插件商店。
 
 ## 🚀 如何提交插件
 

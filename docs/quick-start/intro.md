@@ -2,7 +2,7 @@
 title: Introduction
 group: Quick Start
 nav:
-  title: Guide
+  title: Quick Start
   order: 1
 ---
 

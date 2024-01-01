@@ -1,5 +1,5 @@
 ---
-title: 服务端错误类型 PluginErrorType
+title: PluginErrorType 服务端错误类型
 atomId: PluginErrorType
 description: 服务端错误类型
 group: 服务端

@@ -1,5 +1,5 @@
 ---
-title: Message Communication Types
+title: PluginChannel
 order: 10
 group:
   title: Miscellaneous
@@ -8,7 +8,7 @@ atomId: PluginChannel
 description: Provides detailed explanations of message types for plugin communication
 nav:
   title: API
-  order: 1
+  order: 2
 ---
 
 # PluginChannel Communication Messages
