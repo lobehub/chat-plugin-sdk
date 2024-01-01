@@ -7,7 +7,7 @@ hero:
     - text: GitHub
       openExternal: true
       link: https://github.com/lobehub/chat-plugin-sdk
-    - text: Get Started
-      link: /quick-start/intro
+    - text: 立即开始
+      link: /zh-CN/quick-start/intro
       type: primary
 ---

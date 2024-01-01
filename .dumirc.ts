@@ -5,18 +5,6 @@ import { homepage } from './package.json';
 const isWin = process.platform === 'win32';
 
 const themeConfig = {
-  actions: [
-    {
-      link: homepage,
-      openExternal: true,
-      text: 'Github',
-    },
-    {
-      link: '/quick-start/intro',
-      text: 'Get Started',
-      type: 'primary',
-    },
-  ],
   footer: 'Made with 🤯 by LobeHub',
   name: 'Lobe Chat Plugin SDK',
   socialLinks: {
