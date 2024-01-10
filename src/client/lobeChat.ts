@@ -25,12 +25,21 @@ class LobeChat {
         resolve(undefined as any);
         return;
       }
+
+      const timer = setTimeout(() => {
+        resolve(undefined as any);
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
+        window.removeEventListener('message', receiverData);
+      }, 1000);
+
       const receiverData = (e: MessageEvent) => {
         if (e.data.type === PluginChannel.initStandalonePlugin) {
           // TODO: drop e.data.props in v2
           const payload: PluginRequestPayload = e.data.payload || e.data.props;
           const func = payload.apiName;
           const args = JSON.parse(payload.arguments || '{}');
+          clearTimeout(timer);
+
           resolve({
             arguments: args,
             name: func,

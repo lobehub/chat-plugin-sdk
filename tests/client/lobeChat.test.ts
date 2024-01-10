@@ -91,7 +91,7 @@ describe('lobeChat', () => {
     });
   });
 
-  describe('fetchPluginPayload', () => {
+  describe('getPluginPayload', () => {
     it('should resolve undefined when window is undefined', async () => {
       const originalWindow = global.window;
       global.window = undefined as any;
@@ -171,6 +171,25 @@ describe('lobeChat', () => {
         'message',
         expect.any(Function),
       );
+    });
+
+    it('should resolve undefined if message is not received within timeout', async () => {
+      vi.useFakeTimers();
+
+      const promise = lobeChat.getPluginPayload();
+
+      // Fast-forward until all timers have been executed
+      vi.runAllTimers();
+
+      const result = await promise;
+
+      expect(result).toBeUndefined();
+      expect(global.window.removeEventListener).toHaveBeenCalledWith(
+        'message',
+        expect.any(Function),
+      );
+
+      vi.useRealTimers();
     });
   });
 
