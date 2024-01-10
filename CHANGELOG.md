@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.32.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.0...v1.32.1)
+
+<sup>Released on **2024-01-10**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Resolve undefined when plugin is not in LobeChat.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Resolve undefined when plugin is not in LobeChat ([53e36c1](https://github.com/lobehub/chat-plugin-sdk/commit/53e36c1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.32.0](https://github.com/lobehub/chat-plugin-sdk/compare/v1.31.0...v1.32.0)
 
 <sup>Released on **2023-12-29**</sup>
