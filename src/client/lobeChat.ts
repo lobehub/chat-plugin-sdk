@@ -100,8 +100,11 @@ class LobeChat {
       top?.postMessage({ type: PluginChannel.fetchPluginMessage }, '*');
     });
 
-  setPluginMessage = (content: any) => {
-    top?.postMessage({ content, type: PluginChannel.fillStandalonePluginContent }, '*');
+  setPluginMessage = (content: any, triggerAiMessage: boolean) => {
+    top?.postMessage(
+      { content, triggerAiMessage, type: PluginChannel.fillStandalonePluginContent },
+      '*',
+    );
   };
 
   getPluginState = <T = any>(key: string) =>
