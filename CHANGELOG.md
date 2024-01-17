@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.32.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.1...v1.32.2)
+
+<sup>Released on **2024-01-17**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix can not setPluginMessage without trigger ai message.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix can not setPluginMessage without trigger ai message ([8598b5f](https://github.com/lobehub/chat-plugin-sdk/commit/8598b5f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.32.1](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.0...v1.32.1)
 
 <sup>Released on **2024-01-10**</sup>
