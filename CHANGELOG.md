@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.32.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.2...v1.32.3)
+
+<sup>Released on **2024-01-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix setPluginMessage types.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix setPluginMessage types ([39b4c9a](https://github.com/lobehub/chat-plugin-sdk/commit/39b4c9a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.32.2](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.1...v1.32.2)
 
 <sup>Released on **2024-01-17**</sup>
