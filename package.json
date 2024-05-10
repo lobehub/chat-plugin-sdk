@@ -115,8 +115,7 @@
     "stylelint": "^15",
     "ts-json-schema-generator": "^1.4.0",
     "typescript": "^5",
-    "vitest": "^1",
-    "vue": "^3.4.27"
+    "vitest": "^1"
   },
   "peerDependencies": {
     "react": ">=18",
