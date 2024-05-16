@@ -2,4 +2,4 @@ export * from './useOnStandalonePluginInit';
 export * from './usePluginSettings';
 export * from './usePluginState';
 export * from './useWatchPluginMessage';
-export * from './vue';
+export * as vue from './vue';

@@ -2,7 +2,7 @@ import { onMounted } from 'vue';
 
 import { PluginPayload, lobeChat } from '@/client';
 
-export const useOnStandalonePluginInitVue = <T = any>(
+export const useOnStandalonePluginInit = <T = any>(
   callback: (payload: PluginPayload<T>) => void,
 ) => {
   onMounted(() => {

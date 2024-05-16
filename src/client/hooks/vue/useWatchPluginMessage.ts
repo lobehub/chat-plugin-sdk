@@ -4,7 +4,7 @@ import { PluginChannel } from '../../const';
 import { PluginRenderProps } from '../../type';
 import { onReceiveData } from '../../utils';
 
-export const useWatchPluginMessageVue = <T = any>() => {
+export const useWatchPluginMessage = <T = any>() => {
   const result = ref<{ data: T; loading: boolean }>({
     data: undefined as T,
     loading: true,
@@ -26,5 +26,5 @@ export const useWatchPluginMessageVue = <T = any>() => {
     window?.removeEventListener('message', receiverData);
   });
 
-  return result;
+  return result.value;
 };
