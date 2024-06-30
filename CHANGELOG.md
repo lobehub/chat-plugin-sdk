@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.32.4](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.3...v1.32.4)
+
+<sup>Released on **2024-06-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Ensure request body properties are defined.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Ensure request body properties are defined, closes [#43](https://github.com/lobehub/chat-plugin-sdk/issues/43) ([933b53c](https://github.com/lobehub/chat-plugin-sdk/commit/933b53c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.32.3](https://github.com/lobehub/chat-plugin-sdk/compare/v1.32.2...v1.32.3)
 
 <sup>Released on **2024-01-26**</sup>
