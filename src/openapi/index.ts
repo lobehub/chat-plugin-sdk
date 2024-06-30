@@ -30,7 +30,7 @@ export class OpenAPIConvertor {
 
           const parameters = this.mergeSchemas(...Object.values(parametersSchema));
 
-          if (requestBodySchema && Object.keys(requestBodySchema.properties).length > 0) {
+          if (requestBodySchema && requestBodySchema.properties && Object.keys(requestBodySchema.properties).length > 0) {
             parameters.properties[OPENAPI_REQUEST_BODY_KEY] = requestBodySchema;
             parameters.required?.push('_requestBody');
           }
