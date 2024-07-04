@@ -48,5 +48,7 @@ client.d.ts
 client.js
 openapi.d.ts
 openapi.js
+client-vue.d.ts
+client-vue.js
 bun.lockb
 schema.json

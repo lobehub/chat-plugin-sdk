@@ -35,7 +35,7 @@
   ],
   "scripts": {
     "build": "father build && npm run build:entry && npm run build:schema",
-    "build:entry": "tsc client.ts --declaration && tsc openapi.ts --declaration",
+    "build:entry": "tsc client.ts --declaration && tsc openapi.ts --declaration && tsc client-vue.ts --declaration",
     "build:schema": "ts-json-schema-generator --path src/types/manifest.ts --type LobeChatPluginManifest -o schema.json",
     "build:watch": "father dev",
     "ci": "npm run lint && npm run type-check && npm run doctor",
@@ -115,7 +115,8 @@
     "stylelint": "^15",
     "ts-json-schema-generator": "^1.4.0",
     "typescript": "^5",
-    "vitest": "^1"
+    "vitest": "^1",
+    "vue": "^3.4.27"
   },
   "peerDependencies": {
     "react": ">=18",
